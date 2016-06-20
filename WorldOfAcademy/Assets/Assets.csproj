@@ -41,6 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Contracts\IFraction.cs" />
+    <Compile Include="Contracts\IUnit.cs" />
+    <Compile Include="Models\Alliance\Dwarf.cs" />
+    <Compile Include="Models\Alliance\Human.cs" />
+    <Compile Include="Models\Alliance\NigthElf.cs" />
+    <Compile Include="Models\FractionType.cs" />
+    <Compile Include="Models\Horde\BloodElf.cs" />
+    <Compile Include="Models\Horde\Orc.cs" />
+    <Compile Include="Models\Horde\Tauren.cs" />
+    <Compile Include="Models\Unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
