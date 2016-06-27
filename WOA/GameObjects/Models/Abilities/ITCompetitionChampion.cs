@@ -1,13 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameObjects.Models.Abilities
+﻿namespace GameObjects.Models.Abilities
 {
-    class ITCompetitionChampion
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using Abstract;
+
+    public class ITCompetitionChampion : Ability
     {
-        // can expolit he syste e.g: commits to bg coder and get points without proper solution of the problem
+        private const int KnowledgeBoostConst = 12;
+
+        // can expolit he system e.g: commits to bg coder and get points without proper solution of the problem
+        public ITCompetitionChampion(string name) : base(name)
+        {
+        }
+
+        public override int KnowledgeBoost()
+        {
+            return KnowledgeBoostConst;
+        }
     }
 }

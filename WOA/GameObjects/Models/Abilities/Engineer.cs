@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameObjects.Models.Abilities
+﻿namespace GameObjects.Models.Abilities
 {
-    class Engineer
+    using GameObjects.Models.Abstract;
+    using Contracts;
+
+    public class Engineer : Ability, IAbility
     {
+        private const int KnowledgeBoostConst = 10;
         // can solve problems easier
+        public Engineer(string name)
+            : base(name)
+        {
+        }
+
+        public override int KnowledgeBoost()
+        {
+            return KnowledgeBoostConst;
+        }
     }
 }
