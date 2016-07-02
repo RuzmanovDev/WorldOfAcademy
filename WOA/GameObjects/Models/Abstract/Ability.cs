@@ -1,16 +1,15 @@
 ﻿namespace GameObjects.Models.Abstract
 {
+    using System;
     using GameObjects.Contracts;
 
     public abstract class Ability : IAbility
     {
-        public Ability(string name)
+        public virtual void DoSpecialy()
         {
-            this.Name = name;
+            throw new NotImplementedException();
         }
-        public string Name { get; protected set; }
 
         public abstract int KnowledgeBoost();
-
     }
 }

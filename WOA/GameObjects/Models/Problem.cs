@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameObjects.Models
 {
-    class Problem
+ public   class Problem
     {
     }
 }

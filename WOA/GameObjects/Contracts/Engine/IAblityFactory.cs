@@ -2,6 +2,6 @@
 {
     public interface IAblityFactory
     {
-        IAbility CreateAbility(); // TODO: add parameters to the constructor
+        IAbility CreateAbility(string name); // TODO: add parameters to the constructor
     }
 }

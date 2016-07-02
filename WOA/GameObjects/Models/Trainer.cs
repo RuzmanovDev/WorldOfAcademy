@@ -12,16 +12,16 @@
 
     public class Trainer : Human, ITrainer, IHuman
     {
-        private IList<IProblem> problems;
+        private ICollection<IProblem> problems;
 
-        public Trainer(string name, int hp, int energy, IList<IProblem> problems, TrainerType trinerType)
+        public Trainer(string name, int hp, int energy, ICollection<IProblem> problems, TrainerType trinerType)
             : base(name, hp, energy)
         {
             this.Problems = problems;
             this.trainerType = trinerType;
         }
 
-        public IList<IProblem> Problems
+        public ICollection<IProblem> Problems
         {
             get
             {

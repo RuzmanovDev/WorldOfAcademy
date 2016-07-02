@@ -2,9 +2,8 @@
 {
     public interface IAbility
     {
-        string Name { get; }
-
         int KnowledgeBoost();
 
+        void DoSpecialy();
     }
 }

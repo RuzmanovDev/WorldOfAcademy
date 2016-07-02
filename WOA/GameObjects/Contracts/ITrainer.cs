@@ -7,7 +7,7 @@
     {
         TrainerType trainerType { get; }
 
-        IList<IProblem> Problems { get; }
+        ICollection<IProblem> Problems { get; }
 
         void ThrowProblem(IStudent st);
     }

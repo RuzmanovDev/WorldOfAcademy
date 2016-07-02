@@ -7,15 +7,13 @@
     using System.Threading.Tasks;
 
     using Abstract;
-
-    public class Mathematician : Ability
+    using Contracts;
+    public class Mathematician : Ability, IAbility
     {
         private const int KnowledgeBoostConst = 20;
 
         // can solve problems faster
-        public Mathematician(string name) : base(name)
-        {
-        }
+       
 
         public override int KnowledgeBoost()
         {
