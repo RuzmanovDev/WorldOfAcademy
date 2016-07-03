@@ -4,6 +4,6 @@
 
     public interface IExam : IProblem
     {
-        IList<IProblem> ProgblemsList { get; }
+        ICollection<IProblem> ProgblemsList { get; }
     }
 }

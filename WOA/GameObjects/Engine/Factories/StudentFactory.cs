@@ -7,9 +7,9 @@
     using Models;
     public class StudentFactory : IStudentFactory
     {
-        public IStudent CreateStudent(string name, int hp, int energy)
+        public IStudent CreateStudent(string name)
         {
-            return new Student(name, hp, energy);
+            return new Student(name);
         }
     }
 }

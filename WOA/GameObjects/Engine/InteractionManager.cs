@@ -10,7 +10,7 @@
     using Contracts.Engine;
     using Factories;
     using Enumerations;
-
+    // does most of the work maybe split it to smaller classes 
     public class InteractionManager
     {
         private readonly ICollection<ITrainer> trainers;
@@ -28,16 +28,22 @@
         {
             this.trainers = new List<ITrainer>();
             this.students = new List<IStudent>();
+
             this.studentFactory = new StudentFactory();
             this.trainerFactory = new TrainerFactory();
             this.abilityFactory = new AbilityFactory();
         }
 
 
-        public void CreatTrainer(string name, TrainerType trainerType)
+        public void AddTrainer(string name, TrainerType trainerType)
         {
-            this.trainerFactory.CreateTrainer(name, 40, 40, null, trainerType);
+            this.trainers.Add(this.trainerFactory.CreateTrainer(name, 40, 40, null, trainerType));
             //  this.trainerFactory.CreateTrainer(trainer);
+        }
+
+        public void AddStudent(string name)
+        {
+            this.students.Add(this.studentFactory.CreateStudent(name));
         }
 
     }

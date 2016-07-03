@@ -12,8 +12,8 @@ namespace GameObjects.Models
     public class Student : Human, IStudent
     {
 
-        public Student(string name, int hp, int energy)
-            : base(name, hp, energy)
+        public Student(string name)
+            : base(name, 50, 100)
         {
         }
 

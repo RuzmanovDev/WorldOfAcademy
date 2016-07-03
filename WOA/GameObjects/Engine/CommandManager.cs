@@ -2,10 +2,11 @@
 {
     using Enumerations;
     using System;
+
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-
+    // parse the commands and pass them to the interaction manager
     public class CommandManager
     {
 
@@ -38,7 +39,10 @@
             switch (objectType.ToLower())
             {
                 case "trainer":
-                    this.InteractionManager.CreatTrainer(objectName,TrainerType.Current);
+                    this.InteractionManager.AddTrainer(objectName,TrainerType.Current);
+                    break;
+                case "student":
+                    this.InteractionManager.AddStudent(objectName);
                     break;
             }
         }
