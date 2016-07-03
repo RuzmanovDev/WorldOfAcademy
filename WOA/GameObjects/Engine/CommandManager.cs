@@ -30,6 +30,9 @@
                 case "create":
                     this.ExecuteCreateCommand(splittedCommand[1], splittedCommand[2]);
                     break;
+                case "exam":
+                    this.ExecuteExamCommand();
+                    break;
                 default: break;
             }
         }
@@ -45,6 +48,11 @@
                     this.InteractionManager.AddStudent(objectName);
                     break;
             }
+        }
+
+        private void ExecuteExamCommand()
+        {
+            // TODO: 
         }
     }
 }
