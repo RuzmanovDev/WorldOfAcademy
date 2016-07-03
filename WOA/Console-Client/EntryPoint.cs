@@ -14,9 +14,9 @@
     {
         public static void Main(string[] args)
         {
-            IStudentFactory studentFactory = GetStudentFactory();
-            ITrainerFactory trainerFactory = GetTrainerFactory();
-            IAblityFactory abilityFactory = GetAbilityFactory();
+            //IStudentFactory studentFactory = GetStudentFactory();
+            //ITrainerFactory trainerFactory = GetTrainerFactory();
+            //IAblityFactory abilityFactory = GetAbilityFactory();
 
             //TODO extract interface fot the itneraction manager
             var interactionManager = new InteractionManager();
@@ -37,19 +37,19 @@
             }
         }
 
-        private static IStudentFactory GetStudentFactory()
-        {
-            return new StudentFactory();
-        }
+        //private static IStudentFactory GetStudentFactory()
+        //{
+        //    return new StudentFactory();
+        //}
 
-        private static ITrainerFactory GetTrainerFactory()
-        {
-            return new TrainerFactory();
-        }
+        //private static ITrainerFactory GetTrainerFactory()
+        //{
+        //    return new TrainerFactory();
+        //}
 
-        private static IAblityFactory GetAbilityFactory()
-        {
-            return new AbilityFactory();
-        }
+        //private static IAblityFactory GetAbilityFactory()
+        //{
+        //    return new AbilityFactory();
+        //}
     }
 }

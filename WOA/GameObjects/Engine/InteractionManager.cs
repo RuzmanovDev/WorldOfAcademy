@@ -8,6 +8,8 @@
 
     using Contracts;
     using Contracts.Engine;
+    using Factories;
+    using Enumerations;
 
     public class InteractionManager
     {
@@ -15,9 +17,9 @@
 
         private readonly ICollection<IStudent> students;
 
-        private IStudentFactory studentFactory;
-        private ITrainerFactory trainerFactory;
-        private IAblityFactory abilityFactory;
+        private readonly IStudentFactory studentFactory;
+        private readonly ITrainerFactory trainerFactory;
+        private readonly IAblityFactory abilityFactory;
 
         // private readonly IGameObjectManufacturerEngine gameObjectsFactory;
 
@@ -26,13 +28,17 @@
         {
             this.trainers = new List<ITrainer>();
             this.students = new List<IStudent>();
+            this.studentFactory = new StudentFactory();
+            this.trainerFactory = new TrainerFactory();
+            this.abilityFactory = new AbilityFactory();
         }
 
 
-        public void CreatTrainer(string trianer)
+        public void CreatTrainer(string name, TrainerType trainerType)
         {
-          //  this.trainerFactory.CreateTrainer(trainer);
+            this.trainerFactory.CreateTrainer(name, 40, 40, null, trainerType);
+            //  this.trainerFactory.CreateTrainer(trainer);
         }
-        
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace GameObjects.Engine
 {
+    using Enumerations;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -32,9 +33,14 @@
             }
         }
 
-        private void ExecuteCreateCommand(string obejctType, string objectName)
+        private void ExecuteCreateCommand(string objectType, string objectName)
         {
-          //  this.InteractionManager.
+            switch (objectType.ToLower())
+            {
+                case "trainer":
+                    this.InteractionManager.CreatTrainer(objectName,TrainerType.Current);
+                    break;
+            }
         }
     }
 }
