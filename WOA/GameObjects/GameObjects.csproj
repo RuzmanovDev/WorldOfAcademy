@@ -43,6 +43,7 @@
     <Compile Include="Common\Validator.cs" />
     <Compile Include="Contracts\Engine\IAblityFactory.cs" />
     <Compile Include="Contracts\Engine\IGameObjectManufacturerEngine.cs" />
+    <Compile Include="Contracts\Engine\ILogger.cs" />
     <Compile Include="Contracts\Engine\IStudentFactory.cs" />
     <Compile Include="Contracts\Engine\ITrainerFactory.cs" />
     <Compile Include="Contracts\IAbility.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Contracts\IStudent.cs" />
     <Compile Include="Contracts\ITrainer.cs" />
     <Compile Include="Engine\CommandManager.cs" />
+    <Compile Include="Engine\ConsoleLogger.cs" />
     <Compile Include="Engine\Factories\AbilityFactory.cs" />
     <Compile Include="Engine\Factories\StudentFactory.cs" />
     <Compile Include="Engine\Factories\TrainerFactory.cs" />

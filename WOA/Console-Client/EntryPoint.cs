@@ -19,13 +19,16 @@
             //IAblityFactory abilityFactory = GetAbilityFactory();
 
             //TODO extract interface fot the itneraction manager
-            var interactionManager = new InteractionManager();
             // TODO: extract interface for commandManager
+            ILogger logger = new ConsoleLogger();
+
+            var interactionManager = new InteractionManager(logger);
 
             var commandManager = new CommandManager(interactionManager);
 
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 string command = Console.ReadLine();
 
                 commandManager.ProccessCommand(command);

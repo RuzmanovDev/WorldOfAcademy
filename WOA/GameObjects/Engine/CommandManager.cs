@@ -48,6 +48,8 @@
                     this.InteractionManager.AddStudent(objectName);
                     break;
             }
+
+         
         }
 
         private void ExecuteExamCommand()

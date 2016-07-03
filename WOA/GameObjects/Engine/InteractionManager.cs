@@ -21,10 +21,13 @@
         private readonly ITrainerFactory trainerFactory;
         private readonly IAblityFactory abilityFactory;
 
+
+        private readonly ILogger logger;
+
         // private readonly IGameObjectManufacturerEngine gameObjectsFactory;
 
 
-        public InteractionManager()
+        public InteractionManager(ILogger logger)
         {
             this.trainers = new List<ITrainer>();
             this.students = new List<IStudent>();
@@ -32,18 +35,25 @@
             this.studentFactory = new StudentFactory();
             this.trainerFactory = new TrainerFactory();
             this.abilityFactory = new AbilityFactory();
+
+            this.logger = logger;
         }
 
 
         public void AddTrainer(string name, TrainerType trainerType)
         {
             this.trainers.Add(this.trainerFactory.CreateTrainer(name, 40, 40, null, trainerType));
+
+            logger.WriteLine($"--Trainer {name} was added");
             //  this.trainerFactory.CreateTrainer(trainer);
         }
 
         public void AddStudent(string name)
         {
             this.students.Add(this.studentFactory.CreateStudent(name));
+
+            logger.WriteLine($"--Student {name} was added");
+
         }
 
     }
