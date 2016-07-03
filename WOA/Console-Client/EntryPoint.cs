@@ -18,9 +18,11 @@
             ITrainerFactory trainerFactory = GetTrainerFactory();
             IAblityFactory abilityFactory = GetAbilityFactory();
 
+            //TODO extract interface fot the itneraction manager
+            var interactionManager = new InteractionManager();
             // TODO: extract interface for commandManager
 
-            var commandManager = new CommandManager();
+            var commandManager = new CommandManager(interactionManager);
 
             while (true)
             {

@@ -7,8 +7,16 @@
 
     public class CommandManager
     {
-        public string Command { get;  private set; }
 
+        public string Command { get; private set; }
+
+
+        public CommandManager(InteractionManager interactionManager)
+        {
+            this.InteractionManager = interactionManager;
+        }
+
+        public InteractionManager InteractionManager { get; private set; }
 
         public void ProccessCommand(string command)
         {
@@ -17,9 +25,16 @@
 
             switch (commandType)
             {
-                case "create": break;
+                case "create":
+                    this.ExecuteCreateCommand(splittedCommand[1], splittedCommand[2]);
+                    break;
                 default: break;
             }
+        }
+
+        private void ExecuteCreateCommand(string obejctType, string objectName)
+        {
+          //  this.InteractionManager.
         }
     }
 }

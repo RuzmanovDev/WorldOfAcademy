@@ -15,13 +15,24 @@
 
         private readonly ICollection<IStudent> students;
 
-        private readonly IGameObjectManufacturerEngine gameObjectsFactory;
+        private IStudentFactory studentFactory;
+        private ITrainerFactory trainerFactory;
+        private IAblityFactory abilityFactory;
 
-        public InteractionManager(ICollection<ITrainer> trainers,ICollection<IStudent> students)
+        // private readonly IGameObjectManufacturerEngine gameObjectsFactory;
+
+
+        public InteractionManager()
         {
-            this.trainers = trainers;
-            this.students = students;
+            this.trainers = new List<ITrainer>();
+            this.students = new List<IStudent>();
         }
 
+
+        public void CreatTrainer(string trianer)
+        {
+          //  this.trainerFactory.CreateTrainer(trainer);
+        }
+        
     }
 }
