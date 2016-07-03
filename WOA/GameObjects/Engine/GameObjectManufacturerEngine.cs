@@ -6,26 +6,9 @@
 
     public class GameObjectManufacturerEngine : IGameObjectManufacturerEngine
     {
+        //TODO maybe delete this clas
         public void Start()
         {
-            IStudentFactory studentFactory = GetStudentFactory();
-            ITrainerFactory trainerFactory = GetTrainerFactory();
-            IAblityFactory abilityFactory = GetAbilityFactory();
-        }
-
-        private IStudentFactory GetStudentFactory()
-        {
-            return new StudentFactory();
-        }
-
-        private ITrainerFactory GetTrainerFactory()
-        {
-            return new TrainerFactory();
-        }
-
-        private IAblityFactory GetAbilityFactory()
-        {
-            return new AbilityFactory();
         }
     }
 }
