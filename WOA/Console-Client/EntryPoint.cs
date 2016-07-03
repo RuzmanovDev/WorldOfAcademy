@@ -8,31 +8,16 @@
 
     using GameObjects.Contracts.Engine;
     using GameObjects.Engine.Factories;
+    using GameObjects.Engine;
 
     public class EntryPoint
     {
         public static void Main(string[] args)
         {
-            IStudentFactory studentFactory = GetStudentFactory();
-            ITrainerFactory trainerFactory = GetTrainerFactory();
-            IAblityFactory abilityFactory = GetAbilityFactory();
+            var manufacturerObjects = new GameObjectManufacturerEngine();
 
+            manufacturerObjects.Start();
 
-        }
-
-        private static IStudentFactory GetStudentFactory()
-        {
-            return new StudentFactory();
-        }
-
-        private static ITrainerFactory GetTrainerFactory()
-        {
-            return new TrainerFactory();
-        }
-
-        private static IAblityFactory GetAbilityFactory()
-        {
-            return new AbilityFactory();
         }
     }
 }
