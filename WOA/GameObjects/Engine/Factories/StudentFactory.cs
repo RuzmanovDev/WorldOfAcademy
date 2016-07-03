@@ -5,7 +5,7 @@
     using GameObjects.Contracts;
     using GameObjects.Contracts.Engine;
 
-    class StudentFactory : IStudentFactory
+    public class StudentFactory : IStudentFactory
     {
         public IStudent CreateStudent()
         {
