@@ -14,9 +14,9 @@
             Console.WriteLine(text);
         }
 
-        public void WriteLine(string text, ConsoleColor color)
+        public void LogError(string text)
         {
-            Console.ForegroundColor = color;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(text);
         }
     }

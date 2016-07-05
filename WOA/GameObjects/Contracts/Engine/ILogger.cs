@@ -6,6 +6,6 @@
     {
         void WriteLine(string text);
 
-        void WriteLine(string test, ConsoleColor color);
+        void LogError(string test);
     }
 }

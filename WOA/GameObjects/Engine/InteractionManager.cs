@@ -80,7 +80,7 @@
 
         public void InvalidCommand()
         {
-            this.logger.WriteLine(GlobalErrorMessages.InvalidCommand(),ConsoleColor.Red);
+            this.logger.LogError(GlobalErrorMessages.InvalidCommand());
         }
     }
 }
