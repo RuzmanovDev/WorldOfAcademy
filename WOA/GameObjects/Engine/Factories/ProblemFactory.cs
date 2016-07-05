@@ -32,7 +32,8 @@
 
             // TODO: add more problems to the examlist
             string[] problemNames = {"Kot-takoa","Malko Kote", "Card Wars Batka", "Penguin Airlines", "Batman", "Bobi-avokadoto", "Harry-Potter -20D",
-                "Singing Cats"};
+                "Singing Cats", "Chess-moves","Hills","Brackets","Brackets again", "Pipes","Mices","Na baba mi smetalnika","Angry bits", "Cats singing","De-cat coding", "Maslan",
+            "Two girls one path" , "Bit-shift Matrix", "Doge Coin","RelevanceIndex", "Digits"};
 
             name = problemNames[RandomProvider.Instance.Next(0, problemNames.Length)]; // maybe -1
 

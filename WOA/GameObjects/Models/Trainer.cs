@@ -45,7 +45,7 @@
 
         public override string ToString()
         {
-            return $"Trainer Name: {this.Name}, Trainer Exams: {string.Join(",", this.Exams)}";
+            return $"Trainer Name: {this.Name}, Trainer Exams: {string.Join(Environment.NewLine, this.Exams)}";
         }
     }
 }

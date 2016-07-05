@@ -16,7 +16,6 @@
     public class InteractionManager : IInteractionManager
     {
         private readonly ICollection<ITrainer> trainers;
-
         private readonly ICollection<IStudent> students;
 
         private readonly IStudentFactory studentFactory;
@@ -25,7 +24,7 @@
 
 
         private readonly ILogger logger;
-        private IExamFactory examFactory = new ExamFactory();
+        private readonly IExamFactory examFactory = new ExamFactory();
 
         // private readonly IGameObjectManufacturerEngine gameObjectsFactory;
 
