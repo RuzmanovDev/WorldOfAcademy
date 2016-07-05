@@ -18,7 +18,7 @@
             //ITrainerFactory trainerFactory = GetTrainerFactory();
             //IAblityFactory abilityFactory = GetAbilityFactory();
 
-            //TODO extract interface fot the itneraction manager
+      
             // TODO: extract interface for commandManager
             ILogger logger = new ConsoleLogger();
 

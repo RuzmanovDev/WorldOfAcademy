@@ -8,6 +8,8 @@ namespace GameObjects.Contracts
 
         int Knowledge { get; }
 
-        StudentTye StudentType { get; }
+        StudentType StudentType { get; }
+
+        void ReceiveKnowledge(int knowledge);
     }
 }

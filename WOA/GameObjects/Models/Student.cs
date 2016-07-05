@@ -17,26 +17,21 @@ namespace GameObjects.Models
         private const int StudentTypeKnowedgeBooseKoef = 5;
 
         private int knowledge;
-        private  readonly StudentTye studentType;
+        private  readonly StudentType studentType;
 
         public Student(string name)
             : base(name,Student.StudentBaseHp)
         {
-            this.studentType = (StudentTye)RandomProvider.Instance.Next(0, 4);
+            // generate random number and cast it to enum
+            int studentTypeRandGen = RandomProvider.Instance.Next(0, 4);
+
+            this.studentType = (StudentType)studentTypeRandGen;
             this.Knowledge = GenerateInitialKnowedge(this.StudentType);
         }
 
-        private int GenerateInitialKnowedge(StudentTye studentType)
+        private int GenerateInitialKnowedge(StudentType studentType)
         {
-            return RandomProvider.Instance.Next(10, 21) + (int)this.StudentType * StudentTypeKnowedgeBooseKoef;
-        }
-
-        public IAbility ability
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            return RandomProvider.Instance.Next(10, 21) + ((int)this.StudentType+15) * StudentTypeKnowedgeBooseKoef;
         }
 
         public int Knowledge
@@ -52,7 +47,7 @@ namespace GameObjects.Models
             }
         }
 
-        public StudentTye StudentType
+        public StudentType StudentType
         {
             get
             {
@@ -69,6 +64,11 @@ namespace GameObjects.Models
         public override string ToString()
         {
             return $"Student Name: {this.Name} HP: {this.HP} StudentType: {this.studentType} Knowedge: {this.Knowledge}";
+        }
+
+        public void ReceiveKnowledge(int knowledge)
+        {
+            this.Knowledge += knowledge;
         }
     }
 }

@@ -61,7 +61,7 @@
     <Compile Include="Engine\Factories\StudentFactory.cs" />
     <Compile Include="Engine\Factories\TrainerFactory.cs" />
     <Compile Include="Engine\InteractionManager.cs" />
-    <Compile Include="Enumerations\StudentTye.cs" />
+    <Compile Include="Enumerations\StudentType.cs" />
     <Compile Include="Enumerations\TrainerType.cs" />
     <Compile Include="Models\Abilities\Engineer.cs" />
     <Compile Include="Models\Abilities\ITCompetitionChampion.cs" />
