@@ -12,13 +12,13 @@
 
     public class Trainer : Human, ITrainer, IHuman
     {
+        private const int TrainerBaseHp = 100;
+
         private ICollection<IProblem> problems;
 
-        public Trainer(string name, int hp, int energy, ICollection<IProblem> problems, TrainerType trinerType)
-            : base(name, hp, energy)
+        public Trainer(string name)
+            : base(name, Trainer.TrainerBaseHp)
         {
-            this.Problems = problems;
-            this.trainerType = trinerType;
         }
 
         public ICollection<IProblem> Problems

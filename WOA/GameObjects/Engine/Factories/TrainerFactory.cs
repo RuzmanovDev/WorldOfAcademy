@@ -11,7 +11,7 @@
     {
         public ITrainer CreateTrainer(string name, int hp, int energy, ICollection<IProblem> problems, TrainerType trinerType)
         {
-            return new Trainer(name, hp, energy, problems, trinerType);
+            return new Trainer(name);
         }
 
     }

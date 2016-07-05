@@ -28,16 +28,24 @@
             switch (commandType)
             {
                 case "create":
-                    this.ExecuteCreateCommand(splittedCommand[1], splittedCommand[2]);
+                    this.ParseCreateCommand(splittedCommand[1], splittedCommand[2]);
                     break;
                 case "exam":
                     this.ExecuteExamCommand();
+                    break;
+                case "status":
+                    this.ParseStatusCommand(splittedCommand[1]);
                     break;
                 default: break;
             }
         }
 
-        private void ExecuteCreateCommand(string objectType, string objectName)
+        private void ParseStatusCommand(string name)
+        {
+            this.InteractionManager.PrintStatus(name);
+        }
+
+        private void ParseCreateCommand(string objectType, string objectName)
         {
             switch (objectType.ToLower())
             {

@@ -11,31 +11,14 @@ namespace GameObjects.Models.Abstract
 
     public abstract class Human : IHuman
     {
-        protected int energy;
-        protected int hp;
-        protected string name;
+        private string name;
+        private int hp;
 
-        public Human(string name, int hp, int energy)
+        public Human(string name, int hp)
         {
             this.Name = name;
-            this.HP = hp;
-            this.Energy = energy;
         }
 
-        public int Energy
-        {
-            get
-            {
-                return this.energy;
-            }
-
-            protected set
-            {
-                Validator.CheckIfNull(value, "The energy cannot be null");
-
-                this.energy = value;
-            }
-        }
 
         public int HP
         {

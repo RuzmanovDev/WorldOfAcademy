@@ -1,9 +1,13 @@
-﻿namespace GameObjects.Contracts
+﻿using GameObjects.Enumerations;
+
+namespace GameObjects.Contracts
 {
     public interface IStudent : IHuman
     {
         void HandleProblem(IProblem problem);
-        
-        IAbility ability { get; }
+
+        int Knowledge { get; }
+
+        StudentTye StudentType { get; }
     }
 }

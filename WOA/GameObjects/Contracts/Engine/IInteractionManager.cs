@@ -7,5 +7,8 @@ namespace GameObjects.Contracts.Engine
         void AddTrainer(string name, TrainerType trainerType);
 
         void AddStudent(string name);
+
+        void PrintStatus(string name);
+
     }
 }

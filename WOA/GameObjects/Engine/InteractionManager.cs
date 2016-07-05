@@ -56,5 +56,25 @@
 
         }
 
+        public void PrintStatus(string name)
+        {
+            foreach (var student in this.students)
+            {
+                if (student.Name == name)
+                {
+                    this.logger.WriteLine(student.ToString());
+                    return;
+                }
+            }
+
+            foreach (var trainer in this.trainers)
+            {
+                if (trainer.Name == name)
+                {
+                    this.logger.WriteLine(trainer.ToString());
+                    return;
+                }
+            }
+        }
     }
 }
