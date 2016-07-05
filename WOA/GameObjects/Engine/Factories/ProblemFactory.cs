@@ -34,7 +34,7 @@
             string[] problemNames = {"Kot-takoa","Malko Kote", "Card Wars Batka", "Penguin Airlines", "Batman", "Bobi-avokadoto", "Harry-Potter -20D",
                 "Singing Cats"};
 
-            name = problemNames[RandomProvider.Instance.Next(0, problemNames.Length - 1)];
+            name = problemNames[RandomProvider.Instance.Next(0, problemNames.Length)]; // maybe -1
 
             return name;
         }

@@ -7,17 +7,25 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using Enumerations;
 
     public class Exam : IExam
     {
-        // Icollection<Iproblem>
-        /// name
-        /// 
+        private readonly IEnumerable<IProblem> problemList;
+        private readonly int examDificulty = 0;
+        private readonly string examName;
+
+        public Exam(string examName, IEnumerable<IProblem> problemList)
+        {
+            this.examName = examName;
+            this.problemList = problemList;
+        }
+
         public int Dificulty
         {
             get
             {
-                throw new NotImplementedException();
+                return this.examDificulty;
             }
         }
 
@@ -25,19 +33,19 @@
         {
             get
             {
-                throw new NotImplementedException();
+                return this.examName;
             }
         }
 
-        public ICollection<IProblem> ProgblemsList
+        public IEnumerable<IProblem> ProblemList
         {
             get
             {
-                throw new NotImplementedException();
+                return this.problemList;
             }
         }
 
-        public void GiveKnowledge(IStudent st)
+        public void RestoreHP(IStudent student)
         {
             throw new NotImplementedException();
         }

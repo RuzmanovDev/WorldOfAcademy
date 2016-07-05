@@ -2,8 +2,10 @@
 {
     using System.Collections.Generic;
 
-    public interface IExam : IProblem
+    public interface IExam
     {
-        ICollection<IProblem> ProgblemsList { get; }
+        IEnumerable<IProblem> ProblemList { get; }
+
+        void RestoreHP(IStudent student);
     }
 }

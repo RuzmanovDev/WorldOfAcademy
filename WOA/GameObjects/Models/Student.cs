@@ -70,5 +70,10 @@ namespace GameObjects.Models
         {
             this.Knowledge += knowledge;
         }
+
+        public void ReceiveHP(int hp)
+        {
+            this.HP += hp;
+        }
     }
 }
