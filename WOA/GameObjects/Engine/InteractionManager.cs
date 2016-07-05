@@ -10,7 +10,7 @@
     using Contracts.Engine;
     using Factories;
     using Enumerations;
-    // does most of the work maybe split it to smaller classes 
+    using Common.GlobalMessages;    // does most of the work maybe split it to smaller classes 
     public class InteractionManager : IInteractionManager
     {
         private readonly ICollection<ITrainer> trainers;
@@ -52,7 +52,7 @@
         {
             this.students.Add(this.studentFactory.CreateStudent(name));
 
-            logger.WriteLine($"--Student {name} was added");
+            logger.WriteLine(GlobalMessages.StudentWasAded(name));
 
         }
 
