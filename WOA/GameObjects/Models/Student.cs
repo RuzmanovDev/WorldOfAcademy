@@ -14,6 +14,7 @@ namespace GameObjects.Models
     public class Student : Human, IStudent
     {
         private const int StudentBaseHp = 100;
+        private const int StudentTypeKnowedgeBooseKoef = 5;
 
         private int knowledge;
         private  readonly StudentTye studentType;
@@ -22,7 +23,12 @@ namespace GameObjects.Models
             : base(name,Student.StudentBaseHp)
         {
             this.studentType = (StudentTye)RandomProvider.Instance.Next(0, 4);
+            this.Knowledge = GenerateInitialKnowedge(this.StudentType);
+        }
 
+        private int GenerateInitialKnowedge(StudentTye studentType)
+        {
+            return RandomProvider.Instance.Next(10, 21) + (int)this.StudentType * StudentTypeKnowedgeBooseKoef;
         }
 
         public IAbility ability

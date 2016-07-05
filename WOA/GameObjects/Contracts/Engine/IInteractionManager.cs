@@ -9,6 +9,6 @@ namespace GameObjects.Contracts.Engine
         void AddStudent(string name);
 
         void PrintStatus(string name);
-
+        void InvalidCommand();
     }
 }

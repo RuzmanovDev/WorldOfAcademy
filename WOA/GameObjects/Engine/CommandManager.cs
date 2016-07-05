@@ -1,5 +1,6 @@
 ﻿namespace GameObjects.Engine
 {
+    using Common.GlobalErrorMessages;
     using Contracts.Engine;
     using Enumerations;
     using System;
@@ -36,7 +37,7 @@
                 case "status":
                     this.ParseStatusCommand(splittedCommand[1]);
                     break;
-                default: break;
+                default: InteractionManager.InvalidCommand(); break;
             }
         }
 

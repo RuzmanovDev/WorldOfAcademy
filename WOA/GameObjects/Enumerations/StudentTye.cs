@@ -2,9 +2,9 @@
 {
     public enum StudentTye
     {
-        Engineer = 0,
-        ITCompetitionaMaster = 1,
-        Mathematician = 2,
-        PastYearStudent = 3
+        Engineer = 10,
+        ITCompetitionaMaster = 15,
+        Mathematician = 20,
+        PastYearStudent = 25
     }
 }

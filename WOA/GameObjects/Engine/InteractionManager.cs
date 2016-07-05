@@ -11,6 +11,7 @@
     using Factories;
     using Enumerations;
     using Common.GlobalMessages;    // does most of the work maybe split it to smaller classes 
+    using Common.GlobalErrorMessages;
     public class InteractionManager : IInteractionManager
     {
         private readonly ICollection<ITrainer> trainers;
@@ -29,8 +30,8 @@
 
         public InteractionManager(ILogger logger)
         {
-            this.trainers = new List<ITrainer>();
-            this.students = new List<IStudent>();
+            this.trainers = new HashSet<ITrainer>();
+            this.students = new HashSet<IStudent>();
 
             this.studentFactory = new StudentFactory();
             this.trainerFactory = new TrainerFactory();
@@ -44,7 +45,7 @@
         {
             this.trainers.Add(this.trainerFactory.CreateTrainer(name, 40, 40, null, trainerType));
 
-            logger.WriteLine($"--Trainer {name} was added");
+            logger.WriteLine(GlobalMessages.TrainerWasAdded(name));
             //  this.trainerFactory.CreateTrainer(trainer);
         }
 
@@ -75,6 +76,11 @@
                     return;
                 }
             }
+        }
+
+        public void InvalidCommand()
+        {
+            this.logger.WriteLine(GlobalErrorMessages.InvalidCommand(),ConsoleColor.Red);
         }
     }
 }

@@ -13,5 +13,11 @@
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine(text);
         }
+
+        public void WriteLine(string text, ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine(text);
+        }
     }
 }
