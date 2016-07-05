@@ -7,8 +7,8 @@
     {
         TrainerType trainerType { get; }
 
-        ICollection<IProblem> Problems { get; }
+        IEnumerable<IExam> Exams { get; }
 
-        void ThrowProblem(IStudent st);
+        void ThrowExam(IStudent st);
     }
 }

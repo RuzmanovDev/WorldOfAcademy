@@ -5,6 +5,6 @@ namespace GameObjects.Contracts.Engine
 {
     public interface ITrainerFactory
     {
-        ITrainer CreateTrainer(string name, int hp, int energy, ICollection<IProblem> problems, TrainerType trinerType); // TODO: Add parameters to the constructor
+        ITrainer CreateTrainer(string name, IEnumerable<IExam> problems); // TODO: Add parameters to the constructor
     }
 }

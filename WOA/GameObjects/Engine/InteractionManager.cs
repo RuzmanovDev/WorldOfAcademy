@@ -12,6 +12,7 @@
     using Enumerations;
     using Common.GlobalMessages;    // does most of the work maybe split it to smaller classes 
     using Common.GlobalErrorMessages;
+
     public class InteractionManager : IInteractionManager
     {
         private readonly ICollection<ITrainer> trainers;
@@ -24,6 +25,7 @@
 
 
         private readonly ILogger logger;
+        private IExamFactory examFactory = new ExamFactory();
 
         // private readonly IGameObjectManufacturerEngine gameObjectsFactory;
 
@@ -41,9 +43,11 @@
         }
 
 
-        public void AddTrainer(string name, TrainerType trainerType)
+        public void AddTrainer(string name)
         {
-            this.trainers.Add(this.trainerFactory.CreateTrainer(name, 40, 40, null, trainerType));
+            var examlist = GenerateExams();
+
+            this.trainers.Add(this.trainerFactory.CreateTrainer(name, examlist));
 
             logger.WriteLine(GlobalMessages.TrainerWasAdded(name));
             //  this.trainerFactory.CreateTrainer(trainer);
@@ -81,6 +85,19 @@
         public void InvalidCommand()
         {
             this.logger.LogError(GlobalErrorMessages.InvalidCommand());
+        }
+
+        private IEnumerable<IExam> GenerateExams()
+        {
+            ICollection<IExam> list = new List<IExam>();
+            int numOfExamsOfEachTrainer = 5;
+
+            for (int i = 0; i < numOfExamsOfEachTrainer; i++)
+            {
+                list.Add(examFactory.CreateExam());
+            }
+
+            return list as IEnumerable<IExam>;
         }
     }
 }

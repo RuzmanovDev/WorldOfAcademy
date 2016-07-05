@@ -51,7 +51,7 @@
             switch (objectType.ToLower())
             {
                 case "trainer":
-                    this.InteractionManager.AddTrainer(objectName,TrainerType.Current);
+                    this.InteractionManager.AddTrainer(objectName);
                     break;
                 case "student":
                     this.InteractionManager.AddStudent(objectName);

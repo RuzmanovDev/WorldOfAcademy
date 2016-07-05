@@ -14,31 +14,38 @@
     {
         private const int TrainerBaseHp = 100;
 
-        private ICollection<IProblem> problems;
+        private IEnumerable<IExam> exams;
 
-        public Trainer(string name)
+        public Trainer(string name, IEnumerable<IExam> exams)
             : base(name, Trainer.TrainerBaseHp)
         {
+            this.exams = exams;
         }
 
-        public ICollection<IProblem> Problems
+        public IEnumerable<IExam> Exams
         {
             get
             {
-                return this.problems;
-            }
-
-            private set
-            {
-                this.problems = value;
+                return this.exams;
             }
         }
 
+
         public TrainerType trainerType { get; protected set; }
+
+        public void ThrowExam(IStudent st)
+        {
+            throw new NotImplementedException();
+        }
 
         public void ThrowProblem(IStudent st)
         {
             throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return $"Trainer Name: {this.Name}, Trainer Exams: {string.Join(",", this.Exams)}";
         }
     }
 }

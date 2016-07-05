@@ -10,8 +10,11 @@
     using Contracts.Engine;
     using Common;
     using Models;
+
     public class ExamFactory : IExamFactory
     {
+        private const int NumberOfProblemsInExam = 5;
+
         public IExam CreateExam()
         {
             var name = GeneratExamName();
@@ -37,7 +40,7 @@
 
             IProblemFactory problemFactory = new ProblemFactory();
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < NumberOfProblemsInExam; i++)
             {
                 problems.Add(problemFactory.CreateProblem());
             }

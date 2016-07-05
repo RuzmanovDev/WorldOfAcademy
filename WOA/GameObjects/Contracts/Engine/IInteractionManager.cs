@@ -4,7 +4,7 @@ namespace GameObjects.Contracts.Engine
 {
     public interface IInteractionManager
     {
-        void AddTrainer(string name, TrainerType trainerType);
+        void AddTrainer(string name);
 
         void AddStudent(string name);
 

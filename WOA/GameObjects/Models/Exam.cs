@@ -19,6 +19,11 @@
         {
             this.examName = examName;
             this.problemList = problemList;
+
+            foreach (var problem in this.problemList)
+            {
+                examDificulty += problem.Dificulty;
+            }
         }
 
         public int Dificulty
@@ -48,6 +53,11 @@
         public void RestoreHP(IStudent student)
         {
             throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return $"Exam: {this.Name} Dificulty: {this.Dificulty} Problems: {string.Join(Environment.NewLine, this.problemList)}";
         }
     }
 }

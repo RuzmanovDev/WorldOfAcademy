@@ -45,8 +45,10 @@
     <Compile Include="Common\RandomProvider.cs" />
     <Compile Include="Common\Validator.cs" />
     <Compile Include="Contracts\Engine\IAblityFactory.cs" />
+    <Compile Include="Contracts\Engine\IExamFactory.cs" />
     <Compile Include="Contracts\Engine\IInteractionManager.cs" />
     <Compile Include="Contracts\Engine\ILogger.cs" />
+    <Compile Include="Contracts\Engine\IProblemFactory.cs" />
     <Compile Include="Contracts\Engine\IStudentFactory.cs" />
     <Compile Include="Contracts\Engine\ITrainerFactory.cs" />
     <Compile Include="Contracts\IAbility.cs" />
@@ -58,9 +60,12 @@
     <Compile Include="Engine\CommandManager.cs" />
     <Compile Include="Engine\ConsoleLogger.cs" />
     <Compile Include="Engine\Factories\AbilityFactory.cs" />
+    <Compile Include="Engine\Factories\ExamFactory.cs" />
+    <Compile Include="Engine\Factories\ProblemFactory.cs" />
     <Compile Include="Engine\Factories\StudentFactory.cs" />
     <Compile Include="Engine\Factories\TrainerFactory.cs" />
     <Compile Include="Engine\InteractionManager.cs" />
+    <Compile Include="Enumerations\ProblemType.cs" />
     <Compile Include="Enumerations\StudentType.cs" />
     <Compile Include="Enumerations\TrainerType.cs" />
     <Compile Include="Models\Abilities\Engineer.cs" />
