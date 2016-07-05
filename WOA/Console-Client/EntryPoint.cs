@@ -22,13 +22,13 @@
             // TODO: extract interface for commandManager
             ILogger logger = new ConsoleLogger();
 
-            var interactionManager = new InteractionManager(logger);
+            IInteractionManager interactionManager = new InteractionManager(logger);
 
             var commandManager = new CommandManager(interactionManager);
 
             while (true)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Magenta;
                 string command = Console.ReadLine();
 
                 commandManager.ProccessCommand(command);

@@ -1,24 +1,24 @@
 ﻿namespace GameObjects.Engine
 {
+    using Contracts.Engine;
     using Enumerations;
     using System;
 
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+
     // parse the commands and pass them to the interaction manager
     public class CommandManager
     {
-
-        public string Command { get; private set; }
-
-
-        public CommandManager(InteractionManager interactionManager)
+        public CommandManager(IInteractionManager interactionManager)
         {
             this.InteractionManager = interactionManager;
         }
 
-        public InteractionManager InteractionManager { get; private set; }
+        public string Command { get; private set; }
+
+        public IInteractionManager InteractionManager { get; private set; }
 
         public void ProccessCommand(string command)
         {

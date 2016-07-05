@@ -43,6 +43,7 @@
     <Compile Include="Common\Validator.cs" />
     <Compile Include="Contracts\Engine\IAblityFactory.cs" />
     <Compile Include="Contracts\Engine\IGameObjectManufacturerEngine.cs" />
+    <Compile Include="Contracts\Engine\IInteractionManager.cs" />
     <Compile Include="Contracts\Engine\ILogger.cs" />
     <Compile Include="Contracts\Engine\IStudentFactory.cs" />
     <Compile Include="Contracts\Engine\ITrainerFactory.cs" />

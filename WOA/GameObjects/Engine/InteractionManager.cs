@@ -11,7 +11,7 @@
     using Factories;
     using Enumerations;
     // does most of the work maybe split it to smaller classes 
-    public class InteractionManager
+    public class InteractionManager : IInteractionManager
     {
         private readonly ICollection<ITrainer> trainers;
 
