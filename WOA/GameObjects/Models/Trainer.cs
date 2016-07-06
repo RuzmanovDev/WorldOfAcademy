@@ -33,9 +33,15 @@
 
         public TrainerType trainerType { get; protected set; }
 
-        public void ThrowExam(IStudent st)
+        public void ThrowExam(IEnumerable<IStudent> studentList)
         {
-            throw new NotImplementedException();
+            foreach (var st in studentList)
+            {
+                foreach (var pr in this.Exam.ProblemList)
+                {
+                    st.HandleProblem(pr);
+                }
+            }
         }
 
         public void ThrowProblem(IStudent st)

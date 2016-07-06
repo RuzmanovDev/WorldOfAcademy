@@ -17,5 +17,10 @@ namespace GameObjects.Common.GlobalMessages
         {
             return $"--Trainer {name} was successfully created";
         }
+
+        public static string TrainerThrowsExam(string name)
+        {
+            return $"--Trainer {name} gives exam to students";
+        }
     }
 }

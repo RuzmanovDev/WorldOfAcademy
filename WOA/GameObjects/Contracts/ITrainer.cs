@@ -9,6 +9,6 @@
 
         IExam Exam { get; }
 
-        void ThrowExam(IStudent st);
+        void ThrowExam(IEnumerable<IStudent> st);
     }
 }

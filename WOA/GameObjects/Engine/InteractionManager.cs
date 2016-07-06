@@ -36,7 +36,7 @@
 
             this.studentFactory = new StudentFactory();
             this.trainerFactory = new TrainerFactory();
-         //   this.abilityFactory = new AbilityFactory();
+            //   this.abilityFactory = new AbilityFactory();
 
             this.logger = logger;
         }
@@ -97,13 +97,15 @@
 
             foreach (var tr in this.trainers)
             {
-                if (tr.Name== trainerName)
+                if (tr.Name == trainerName)
                 {
                     trainer = tr;
                 }
             }
 
-            // TODO sohuld give one exam to the students
+            logger.WriteLine(GlobalMessages.TrainerThrowsExam(trainer.Name));
+            trainer.ThrowExam(this.students);
+            ////
         }
     }
 }
