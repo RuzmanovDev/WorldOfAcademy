@@ -10,5 +10,6 @@ namespace GameObjects.Contracts.Engine
 
         void PrintStatus(string name);
         void InvalidCommand();
+        void StartExam(string trainerName);
     }
 }

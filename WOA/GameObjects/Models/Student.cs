@@ -15,23 +15,34 @@ namespace GameObjects.Models
     {
         private const int StudentBaseHp = 100;
         private const int StudentTypeKnowedgeBooseKoef = 5;
+        private const int Baseknowledge = 10;
 
         private int knowledge;
         private  readonly StudentType studentType;
+        private readonly OtherCompetence otherCompetence;
 
         public Student(string name)
             : base(name,Student.StudentBaseHp)
         {
             // generate random number and cast it to enum
-            int studentTypeRandGen = RandomProvider.Instance.Next(0, 4);
+            int studentTypeRandGen = RandomProvider.Instance.Next(0, 2);
 
             this.studentType = (StudentType)studentTypeRandGen;
             this.Knowledge = GenerateInitialKnowedge(this.StudentType);
+            this.otherCompetence = (OtherCompetence)RandomProvider.Instance.Next(0, 5);
         }
 
         private int GenerateInitialKnowedge(StudentType studentType)
         {
-            return RandomProvider.Instance.Next(10, 21) + ((int)this.StudentType+15) * StudentTypeKnowedgeBooseKoef;
+            int initial = 0;
+
+            if(studentType != StudentType.ThisYearStudent)
+            {
+                initial = 10;
+            }
+
+
+            return RandomProvider.Instance.Next(10, 21) + initial + (int)this.OtherCompetence;
         }
 
         public int Knowledge
@@ -55,6 +66,14 @@ namespace GameObjects.Models
             }
         }
 
+        public OtherCompetence OtherCompetence
+        {
+            get
+            {
+                return otherCompetence;
+            }
+        }
+
         public void HandleProblem(IProblem problem)
         {
             throw new NotImplementedException();
@@ -63,7 +82,7 @@ namespace GameObjects.Models
 
         public override string ToString()
         {
-            return $"Student Name: {this.Name} HP: {this.HP} StudentType: {this.studentType} Knowedge: {this.Knowledge}";
+            return $"Student Name: {this.Name} HP: {this.HP} StudentType: {this.studentType} Competence: {this.OtherCompetence} Knowledge: {this.Knowledge}";
         }
 
         public void ReceiveKnowledge(int knowledge)

@@ -14,19 +14,19 @@
     {
         private const int TrainerBaseHp = 100;
 
-        private IEnumerable<IExam> exams;
+        private IExam exam;
 
-        public Trainer(string name, IEnumerable<IExam> exams)
+        public Trainer(string name, IExam exam)
             : base(name, Trainer.TrainerBaseHp)
         {
-            this.exams = exams;
+            this.exam = exam;
         }
 
-        public IEnumerable<IExam> Exams
+        public IExam Exam
         {
             get
             {
-                return this.exams;
+                return this.exam;
             }
         }
 
@@ -45,7 +45,7 @@
 
         public override string ToString()
         {
-            return $"Trainer Name: {this.Name}, Trainer Exams: {string.Join(Environment.NewLine, this.Exams)}";
+            return $"Trainer Name: {this.Name}, Trainer Exams: {string.Join(Environment.NewLine, this.Exam)}";
         }
     }
 }

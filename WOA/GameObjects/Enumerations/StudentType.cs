@@ -2,9 +2,7 @@
 {
     public enum StudentType
     {
-        Engineer = 0,
-        ITCompetitionaMaster = 1,
-        Mathematician = 2,
-        PastYearStudent = 3
+        ThisYearStudent=0,
+        PastYearStudent = 1
     }
 }

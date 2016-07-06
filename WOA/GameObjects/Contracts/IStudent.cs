@@ -10,6 +10,9 @@ namespace GameObjects.Contracts
 
         StudentType StudentType { get; }
 
+        OtherCompetence OtherCompetence { get; }
+
         void ReceiveKnowledge(int knowledge);
+
     }
 }

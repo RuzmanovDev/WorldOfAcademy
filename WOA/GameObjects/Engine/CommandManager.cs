@@ -31,8 +31,9 @@
                 case "create":
                     this.ParseCreateCommand(splittedCommand[1], splittedCommand[2]);
                     break;
-                case "exam":
-                    this.ExecuteExamCommand();
+                case "startexam":
+                    string trainerName = splittedCommand[1];
+                    this.ExecuteExamCommand(trainerName);
                     break;
                 case "status":
                     this.ParseStatusCommand(splittedCommand[1]);
@@ -61,9 +62,9 @@
          
         }
 
-        private void ExecuteExamCommand()
+        private void ExecuteExamCommand(string trainerName)
         {
-            // TODO: 
+            this.InteractionManager.StartExam(trainerName);
         }
     }
 }

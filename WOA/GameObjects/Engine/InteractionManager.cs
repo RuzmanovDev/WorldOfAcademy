@@ -20,7 +20,7 @@
 
         private readonly IStudentFactory studentFactory;
         private readonly ITrainerFactory trainerFactory;
-        private readonly IAblityFactory abilityFactory;
+        //private readonly IAblityFactory abilityFactory;
 
 
         private readonly ILogger logger;
@@ -36,7 +36,7 @@
 
             this.studentFactory = new StudentFactory();
             this.trainerFactory = new TrainerFactory();
-            this.abilityFactory = new AbilityFactory();
+         //   this.abilityFactory = new AbilityFactory();
 
             this.logger = logger;
         }
@@ -44,9 +44,9 @@
 
         public void AddTrainer(string name)
         {
-            var examlist = GenerateExams();
+            var exam = GenerateExam();
 
-            this.trainers.Add(this.trainerFactory.CreateTrainer(name, examlist));
+            this.trainers.Add(this.trainerFactory.CreateTrainer(name, exam));
 
             logger.WriteLine(GlobalMessages.TrainerWasAdded(name));
             //  this.trainerFactory.CreateTrainer(trainer);
@@ -86,17 +86,24 @@
             this.logger.LogError(GlobalErrorMessages.InvalidCommand());
         }
 
-        private IEnumerable<IExam> GenerateExams()
+        private IExam GenerateExam()
         {
-            ICollection<IExam> list = new List<IExam>();
-            int numOfExamsOfEachTrainer = 5;
+            return this.examFactory.CreateExam();
+        }
 
-            for (int i = 0; i < numOfExamsOfEachTrainer; i++)
+        public void StartExam(string trainerName)
+        {
+            ITrainer trainer = null;
+
+            foreach (var tr in this.trainers)
             {
-                list.Add(examFactory.CreateExam());
+                if (tr.Name== trainerName)
+                {
+                    trainer = tr;
+                }
             }
 
-            return list as IEnumerable<IExam>;
+            // TODO sohuld give one exam to the students
         }
     }
 }

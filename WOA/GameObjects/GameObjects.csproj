@@ -65,13 +65,10 @@
     <Compile Include="Engine\Factories\StudentFactory.cs" />
     <Compile Include="Engine\Factories\TrainerFactory.cs" />
     <Compile Include="Engine\InteractionManager.cs" />
+    <Compile Include="Enumerations\OtherCompetence.cs" />
     <Compile Include="Enumerations\ProblemType.cs" />
     <Compile Include="Enumerations\StudentType.cs" />
     <Compile Include="Enumerations\TrainerType.cs" />
-    <Compile Include="Models\Abilities\Engineer.cs" />
-    <Compile Include="Models\Abilities\ITCompetitionChampion.cs" />
-    <Compile Include="Models\Abilities\Mathematician.cs" />
-    <Compile Include="Models\Abilities\PastYearStudent.cs" />
     <Compile Include="Models\Abstract\Ability.cs" />
     <Compile Include="Models\Abstract\Human.cs" />
     <Compile Include="Models\Exam.cs" />
@@ -80,7 +77,9 @@
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\Abilities\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

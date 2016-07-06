@@ -7,7 +7,7 @@
     {
         TrainerType trainerType { get; }
 
-        IEnumerable<IExam> Exams { get; }
+        IExam Exam { get; }
 
         void ThrowExam(IStudent st);
     }
