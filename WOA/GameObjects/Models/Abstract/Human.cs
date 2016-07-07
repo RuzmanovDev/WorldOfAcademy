@@ -1,22 +1,23 @@
-﻿using System;
+﻿namespace GameObjects.Models.Abstract
+{
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameObjects.Models.Abstract
-{
     using Common;
     using GameObjects.Contracts;
 
-    public abstract class Human : IHuman
+    public abstract class Human : Creatures, IHuman
     {
-        private string name;
+
         private int hp;
 
-        public Human(string name, int hp)
+        public Human(string name, int hp) 
+            : base(name)
         {
-            this.Name = name;
+            this.HP = hp;
         }
 
 
@@ -33,17 +34,6 @@ namespace GameObjects.Models.Abstract
             }
         }
 
-        public string Name
-        {
-            get
-            {
-                return this.name;
-            }
-
-            protected set
-            {
-                this.name = value;
-            }
-        }
+       
     }
 }
