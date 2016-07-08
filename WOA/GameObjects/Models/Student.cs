@@ -89,12 +89,12 @@ namespace GameObjects.Models
             }
         }
 
-        public void HandleProblem(IProblem problem)
+        public string HandleProblem(IProblem problem)
         {
             // vikame peta - toi ili pomaga ili ne 
-            this.Pet.HelpMe(this);
-            // prodaljava da reshava 
-            throw new NotImplementedException("Not implemented fully!!!");
+            var resultFromPetHelp = this.Pet.HelpMe(this);
+
+            return resultFromPetHelp;  
         }
 
 

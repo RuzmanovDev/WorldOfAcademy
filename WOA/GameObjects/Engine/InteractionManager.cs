@@ -57,7 +57,7 @@
             this.students.Add(student);
 
             logger.WriteLine(GlobalMessages.StudentWasAded(name));
-          //  logger.WriteLine(student.Pet.HelpMe(student)); // NE TUK!!!
+            //  logger.WriteLine(student.Pet.HelpMe(student)); // NE TUK!!!
 
         }
 
@@ -105,9 +105,9 @@
             }
 
             logger.WriteLine(GlobalMessages.TrainerThrowsExam(trainer.Name));
-            trainer.ThrowExam(this.students);
-           // trainer.OnExamStart(this.students);
-            ////
+            var result = trainer.ThrowExam(this.students);
+
+            logger.WriteLine(result);
         }
 
         public void OnTrowingExam(object sender, IStudent st)

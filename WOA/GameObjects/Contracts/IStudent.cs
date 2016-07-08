@@ -5,7 +5,7 @@ namespace GameObjects.Contracts
 {
     public interface IStudent : IHuman
     {
-        void HandleProblem(IProblem problem);
+        string HandleProblem(IProblem problem);
 
         IKnowledge Knowledge { get; }
 
