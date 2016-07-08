@@ -22,7 +22,7 @@ namespace GameObjects.Models.Pets
         {
             student.ReceiveKnowledge(Dog.KnowledgeBoost);
 
-            return $"{this.ToString()} needs to go for a walk!!!";
+            return $"{this.ToString()} needs to go for a walk!!! The student time to study has been decreased! You receive {Dog.KnowledgeBoost} knowledge!!";
         }
     }
 }
