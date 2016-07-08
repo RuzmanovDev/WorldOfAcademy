@@ -40,6 +40,8 @@
 
         public string ThrowExam(IEnumerable<IStudent> studentList)
         {
+            this.HP -= (int)this.Exam.Dificulty;
+
             var resultFromTrowingExam = new StringBuilder();
 
             foreach (var st in studentList)

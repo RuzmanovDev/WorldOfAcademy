@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using GameObjects.Contracts;
-using GameObjects.Enumerations;
-using GameObjects.Models.Abstract;
-using GameObjects.Common;
-using GameObjects.Models.Stats;
-
-namespace GameObjects.Models
+﻿namespace GameObjects.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using GameObjects.Contracts;
+    using GameObjects.Enumerations;
+    using GameObjects.Models.Abstract;
+    using GameObjects.Common;
+    using GameObjects.Models.Stats;
+
     public class Student : Human, IStudent
     {
         private const int StudentBaseHp = 100;
