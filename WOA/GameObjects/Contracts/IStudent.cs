@@ -16,5 +16,7 @@ namespace GameObjects.Contracts
         void ReceiveKnowledge(double knowledge);
 
         IPet Pet { get; }
+
+        string GetHelp();
     }
 }

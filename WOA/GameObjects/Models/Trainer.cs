@@ -44,9 +44,7 @@
 
             foreach (var st in studentList)
             {
-                // TODO is this working
-                // OnExamStart(st);
-                // string str = st.Pet.HelpMe(st);
+                resultFromTrowingExam.AppendLine(st.GetHelp());
                 foreach (var pr in this.Exam.ProblemList)
                 {
                     resultFromTrowingExam.AppendLine(st.HandleProblem(pr));

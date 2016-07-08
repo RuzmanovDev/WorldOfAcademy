@@ -92,11 +92,15 @@ namespace GameObjects.Models
         public string HandleProblem(IProblem problem)
         {
             // vikame peta - toi ili pomaga ili ne 
-            var resultFromPetHelp = this.Pet.HelpMe(this);
+            var resultFromHandling = "";
 
-            return resultFromPetHelp;  
+            return resultFromHandling;  
         }
 
+        public string GetHelp()
+        {
+            return this.Pet.HelpMe(this);
+        }
 
         public override string ToString()
         {
