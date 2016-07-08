@@ -37,6 +37,8 @@
         {
             foreach (var st in studentList)
             {
+                OnThrowingExam();
+               // string str = st.Pet.HelpMe(st);
                 foreach (var pr in this.Exam.ProblemList)
                 {
                     st.HandleProblem(pr);
@@ -44,10 +46,7 @@
             }
         }
 
-        public void ThrowProblem(IStudent st)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public override string ToString()
         {

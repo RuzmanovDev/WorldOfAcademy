@@ -10,14 +10,19 @@ namespace GameObjects.Models.Pets
 {
     public class Dog : Pet, IPet
     {
+        private const int KnowledgeBoost = -10;
+
         public Dog(string name) : base(name)
         {
         }
 
-        public override string CanHelp()
+      
+
+        public override string HelpMe(IStudent student)
         {
-            // kucheto poiska da se razhodi -nqkakav knowedge
-            throw new NotImplementedException();
+            student.ReceiveKnowledge(Dog.KnowledgeBoost);
+
+            return $"{this.ToString()} needs to go for a walk!!!";
         }
     }
 }

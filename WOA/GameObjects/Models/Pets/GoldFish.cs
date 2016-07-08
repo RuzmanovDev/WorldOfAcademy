@@ -10,14 +10,17 @@ namespace GameObjects.Models.Pets
 {
     public class GoldFish : Pet, IPet
     {
+        private const int KnowledgeBoost = 10;
+
         public GoldFish(string name) : base(name)
         {
         }
 
-        public override string CanHelp()
+        public override string HelpMe(IStudent student)
         {
-            // nosi kasmet ++
-            throw new NotImplementedException();
+            student.ReceiveKnowledge(GoldFish.KnowledgeBoost);
+
+            return $"{this.ToString()} blessed the student!";
         }
     }
 }

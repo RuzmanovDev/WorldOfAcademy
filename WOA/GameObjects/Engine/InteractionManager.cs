@@ -53,9 +53,11 @@
         public void AddStudent(string name)
         {
             IPet pet = this.petFactory.CreatePet();
-            this.students.Add(this.studentFactory.CreateStudent(name,pet));
+            IStudent student = this.studentFactory.CreateStudent(name, pet);
+            this.students.Add(student);
 
             logger.WriteLine(GlobalMessages.StudentWasAded(name));
+          //  logger.WriteLine(student.Pet.HelpMe(student)); // NE TUK!!!
 
         }
 

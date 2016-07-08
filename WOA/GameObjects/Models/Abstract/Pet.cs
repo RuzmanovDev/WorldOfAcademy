@@ -20,11 +20,11 @@
         }
 
         //TODO Maybe this shoud be void method and the string should be printed to another class
-        public abstract string CanHelp();
+        public abstract string HelpMe(IStudent student);
 
         public override string ToString()
         {
-            return $"Pet type:{this.GetType().Name}  Pet name{this.Name}";
+            return $"Pet: {this.GetType().Name} {this.Name}";
         }
     }
 }

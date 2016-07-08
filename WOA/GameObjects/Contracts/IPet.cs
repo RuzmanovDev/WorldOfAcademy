@@ -4,6 +4,6 @@
 
     public interface IPet
     {
-        string CanHelp();
+        string HelpMe(IStudent student);
     }
 }

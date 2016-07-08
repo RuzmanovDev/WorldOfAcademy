@@ -87,7 +87,10 @@ namespace GameObjects.Models
 
         public void HandleProblem(IProblem problem)
         {
-            throw new NotImplementedException();
+            // vikame peta - toi ili pomaga ili ne 
+            this.Pet.HelpMe(this);
+            // prodaljava da reshava 
+            throw new NotImplementedException("Not implemented fully!!!");
         }
 
 
