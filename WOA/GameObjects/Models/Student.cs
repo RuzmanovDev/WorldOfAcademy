@@ -92,9 +92,22 @@ namespace GameObjects.Models
         public string HandleProblem(IProblem problem)
         {
             // vikame peta - toi ili pomaga ili ne 
-            var resultFromHandling = "";
+            var resultFromHandlingTheProblem = new StringBuilder();
 
-            return resultFromHandling;  
+            if (this.Knowledge.Knowledge > problem.Dificulty)
+            {
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has scored 100/100 at {problem.Name}");
+                // TODO: add hp
+            }
+            else
+            {
+                int hpLost = this.HP - (int)problem.Dificulty;
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} failed at {problem.Name}");
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} losses {hpLost}HP");
+                this.HP -= (int)problem.Dificulty;
+            }
+
+            return resultFromHandlingTheProblem.ToString();
         }
 
         public string GetHelp()
