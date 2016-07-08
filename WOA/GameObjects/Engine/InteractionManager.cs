@@ -20,12 +20,11 @@
 
         private readonly IStudentFactory studentFactory;
         private readonly ITrainerFactory trainerFactory;
-
+        private readonly IPetFactory petFactory;
 
         private readonly ILogger logger;
         private readonly IExamFactory examFactory = new ExamFactory();
 
-        // private readonly IGameObjectManufacturerEngine gameObjectsFactory;
 
 
         public InteractionManager(ILogger logger)
@@ -35,7 +34,7 @@
 
             this.studentFactory = new StudentFactory();
             this.trainerFactory = new TrainerFactory();
-            //   this.abilityFactory = new AbilityFactory();
+            this.petFactory = new PetFactory();
 
             this.logger = logger;
         }
@@ -53,7 +52,8 @@
 
         public void AddStudent(string name)
         {
-            this.students.Add(this.studentFactory.CreateStudent(name));
+            IPet pet = this.petFactory.CreatePet();
+            this.students.Add(this.studentFactory.CreateStudent(name,pet));
 
             logger.WriteLine(GlobalMessages.StudentWasAded(name));
 

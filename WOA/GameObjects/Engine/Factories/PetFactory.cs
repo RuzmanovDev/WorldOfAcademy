@@ -13,7 +13,7 @@ namespace GameObjects.Engine.Factories
     public class PetFactory : IPetFactory
     {
         private int NumberOfPetsSoFar = 4;
-        public IPet CreatePet(string name)
+        public IPet CreatePet()
         {
             string petName = GeneratePetName();
             IPet pet = GeneratePetType(petName);

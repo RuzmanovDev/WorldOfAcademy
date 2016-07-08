@@ -47,6 +47,7 @@
     <Compile Include="Contracts\Engine\IExamFactory.cs" />
     <Compile Include="Contracts\Engine\IInteractionManager.cs" />
     <Compile Include="Contracts\Engine\ILogger.cs" />
+    <Compile Include="Contracts\Engine\IPetFactory.cs" />
     <Compile Include="Contracts\Engine\IProblemFactory.cs" />
     <Compile Include="Contracts\Engine\IStudentFactory.cs" />
     <Compile Include="Contracts\Engine\ITrainerFactory.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Engine\CommandManager.cs" />
     <Compile Include="Engine\ConsoleLogger.cs" />
     <Compile Include="Engine\Factories\ExamFactory.cs" />
+    <Compile Include="Engine\Factories\PetFactory.cs" />
     <Compile Include="Engine\Factories\ProblemFactory.cs" />
     <Compile Include="Engine\Factories\StudentFactory.cs" />
     <Compile Include="Engine\Factories\TrainerFactory.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Models\Pets\Cat.cs" />
     <Compile Include="Models\Pets\Dog.cs" />
     <Compile Include="Models\Pets\GoldFish.cs" />
+    <Compile Include="Models\Pets\Turtle.cs" />
     <Compile Include="Models\Problem.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Trainer.cs" />

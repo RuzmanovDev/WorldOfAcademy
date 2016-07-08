@@ -93,7 +93,7 @@ namespace GameObjects.Models
 
         public override string ToString()
         {
-            return $"Student Name: {this.Name} HP: {this.HP} StudentType: {this.studentType} Competence: {this.OtherCompetence} Knowledge: {this.Knowledge}";
+            return $"Student Name: {this.Name} HP: {this.HP} StudentType: {this.studentType} Competence: {this.OtherCompetence} Pet: {this.Pet} Knowledge: {this.Knowledge}";
         }
 
         public void ReceiveKnowledge(int knowledge)

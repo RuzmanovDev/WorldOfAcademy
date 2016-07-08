@@ -2,6 +2,8 @@
 {
     public interface IStudentFactory
     {
-        IStudent CreateStudent(string name); //TODO: Add speicific parameters to the constructor;
+        IStudent CreateStudent(string name, IPet pet); 
+
+
     }
 }
