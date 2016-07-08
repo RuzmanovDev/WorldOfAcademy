@@ -3,7 +3,7 @@ namespace GameObjects.Contracts
 {
     using GameObjects.Enumerations;
 
-    class ICreature
+    public interface ICreature
     {
         string Name { get; }
     }

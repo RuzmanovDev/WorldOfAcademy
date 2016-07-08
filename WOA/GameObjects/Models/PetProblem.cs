@@ -1,5 +1,6 @@
 ﻿namespace GameObjects.Models
 {
+    using Contracts;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -8,5 +9,12 @@
 
     public class PetProblem : IPetProblem
     {
+        public string Name
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

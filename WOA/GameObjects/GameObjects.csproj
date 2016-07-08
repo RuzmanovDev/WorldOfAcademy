@@ -44,14 +44,12 @@
     <Compile Include="Common\GlobalMessages\GlobalMessages.cs" />
     <Compile Include="Common\RandomProvider.cs" />
     <Compile Include="Common\Validator.cs" />
-    <Compile Include="Contracts\Engine\IAblityFactory.cs" />
     <Compile Include="Contracts\Engine\IExamFactory.cs" />
     <Compile Include="Contracts\Engine\IInteractionManager.cs" />
     <Compile Include="Contracts\Engine\ILogger.cs" />
     <Compile Include="Contracts\Engine\IProblemFactory.cs" />
     <Compile Include="Contracts\Engine\IStudentFactory.cs" />
     <Compile Include="Contracts\Engine\ITrainerFactory.cs" />
-    <Compile Include="Contracts\IAbility.cs" />
     <Compile Include="Contracts\ICreature.cs" />
     <Compile Include="Contracts\IExam.cs" />
     <Compile Include="Contracts\IHuman.cs" />
@@ -62,7 +60,6 @@
     <Compile Include="Contracts\ITrainer.cs" />
     <Compile Include="Engine\CommandManager.cs" />
     <Compile Include="Engine\ConsoleLogger.cs" />
-    <Compile Include="Engine\Factories\AbilityFactory.cs" />
     <Compile Include="Engine\Factories\ExamFactory.cs" />
     <Compile Include="Engine\Factories\ProblemFactory.cs" />
     <Compile Include="Engine\Factories\StudentFactory.cs" />
@@ -74,7 +71,6 @@
     <Compile Include="Enumerations\ProblemType.cs" />
     <Compile Include="Enumerations\StudentType.cs" />
     <Compile Include="Enumerations\TrainerType.cs" />
-    <Compile Include="Models\Abstract\Ability.cs" />
     <Compile Include="Models\Abstract\Creatures.cs" />
     <Compile Include="Models\Abstract\Human.cs" />
     <Compile Include="Models\Exam.cs" />
@@ -85,9 +81,7 @@
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Abilities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

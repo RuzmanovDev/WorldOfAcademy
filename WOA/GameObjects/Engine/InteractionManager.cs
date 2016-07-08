@@ -20,7 +20,6 @@
 
         private readonly IStudentFactory studentFactory;
         private readonly ITrainerFactory trainerFactory;
-        //private readonly IAblityFactory abilityFactory;
 
 
         private readonly ILogger logger;

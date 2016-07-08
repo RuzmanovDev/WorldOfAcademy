@@ -7,5 +7,5 @@
 
         string Name { get; }
 
-   }
+    }
 }
