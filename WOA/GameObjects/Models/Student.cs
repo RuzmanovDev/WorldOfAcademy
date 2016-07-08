@@ -20,8 +20,9 @@ namespace GameObjects.Models
         private int knowledge;
         private  readonly StudentType studentType;
         private readonly OtherCompetence otherCompetence;
+        private readonly IPet pet;
 
-        public Student(string name)
+        public Student(string name,IPet pet)
             : base(name,Student.StudentBaseHp)
         {
             // generate random number and cast it to enum
@@ -30,6 +31,8 @@ namespace GameObjects.Models
             this.studentType = (StudentType)studentTypeRandGen;
             this.Knowledge = GenerateInitialKnowedge(this.StudentType);
             this.otherCompetence = (OtherCompetence)RandomProvider.Instance.Next(0, 5);
+            this.pet = pet;
+
         }
 
         private int GenerateInitialKnowedge(StudentType studentType)
@@ -71,6 +74,14 @@ namespace GameObjects.Models
             get
             {
                 return otherCompetence;
+            }
+        }
+
+        public IPet Pet
+        {
+            get
+            {
+                return this.pet;
             }
         }
 

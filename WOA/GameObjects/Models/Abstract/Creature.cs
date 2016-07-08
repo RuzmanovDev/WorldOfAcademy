@@ -1,16 +1,17 @@
 ﻿namespace GameObjects.Models.Abstract
 {
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using Contracts;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
 
-    public abstract class Creatures
+    public abstract class Creature : ICreature
     {
         private string name;
 
-        public Creatures(string name)
+        public Creature(string name)
         {
             this.Name = name;
         }

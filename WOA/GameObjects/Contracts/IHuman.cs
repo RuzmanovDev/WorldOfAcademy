@@ -7,6 +7,5 @@
     {
         int HP { get; }
 
-        //int Energy { get; }
     }
 }

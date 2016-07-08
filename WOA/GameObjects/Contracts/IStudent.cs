@@ -1,4 +1,5 @@
-﻿using GameObjects.Enumerations;
+﻿using GameObjects.Contracts;
+using GameObjects.Enumerations;
 
 namespace GameObjects.Contracts
 {
@@ -14,5 +15,6 @@ namespace GameObjects.Contracts
 
         void ReceiveKnowledge(int knowledge);
 
+        IPet Pet { get; }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
     using Common;
     using GameObjects.Contracts;
 
-    public abstract class Human : Creatures, IHuman
+    public abstract class Human : Creature, IHuman
     {
 
         private int hp;
