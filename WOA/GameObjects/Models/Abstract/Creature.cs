@@ -1,6 +1,7 @@
 ﻿namespace GameObjects.Models.Abstract
 {
     using Contracts;
+    using Common;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -25,6 +26,7 @@
 
             protected set
             {
+                Validator.CheckIfStringIsNullOrEmpty(value);
                 this.name = value;
             }
         }

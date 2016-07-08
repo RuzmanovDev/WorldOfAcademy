@@ -13,6 +13,5 @@
         {
             return new Trainer(name, exam);
         }
-
     }
 }

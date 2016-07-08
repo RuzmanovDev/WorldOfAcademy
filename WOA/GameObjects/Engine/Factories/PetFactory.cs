@@ -1,4 +1,6 @@
-﻿using GameObjects.Contracts.Engine;
+﻿namespace GameObjects.Engine.Factories
+{
+using GameObjects.Contracts.Engine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +10,6 @@ using GameObjects.Contracts;
 using GameObjects.Common;
 using GameObjects.Models.Pets;
 
-namespace GameObjects.Engine.Factories
-{
     public class PetFactory : IPetFactory
     {
         private int NumberOfPetsSoFar = 4;

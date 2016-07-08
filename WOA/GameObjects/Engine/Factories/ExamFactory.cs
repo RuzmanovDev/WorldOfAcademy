@@ -25,9 +25,9 @@
 
         private string GeneratExamName()
         {
-            // TODO: add more exams
             string[] exams = {"CSharp part one", "CSharp part two", "OOP", "КПК", "DSA","HTML","CSS","JS Fundamentals","JS OOP",
-            "JS UI & DOM", "JsApp", "DataBases"};
+            "JS UI & DOM", "JsApp", "DataBases", "ASP.NET Web Forms", "MMApp with NativeScript", "App for Windows",
+                "Mobile App for iPhone & iPad", "Mobile App for Android", "End-to-End JavaScript Applications", "ASP.NET MVC"};
 
             string name = exams[RandomProvider.Instance.Next(0, exams.Length)]; // maybe -1
 

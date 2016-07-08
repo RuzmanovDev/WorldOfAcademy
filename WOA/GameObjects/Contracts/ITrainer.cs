@@ -10,6 +10,5 @@
         IExam Exam { get; }
 
         string ThrowExam(IEnumerable<IStudent> st);
-
     }
 }
