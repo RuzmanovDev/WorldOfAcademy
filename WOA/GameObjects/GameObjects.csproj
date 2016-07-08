@@ -54,6 +54,7 @@
     <Compile Include="Contracts\ICreature.cs" />
     <Compile Include="Contracts\IExam.cs" />
     <Compile Include="Contracts\IHuman.cs" />
+    <Compile Include="Contracts\IKnowledge.cs" />
     <Compile Include="Contracts\IPet.cs" />
     <Compile Include="Contracts\IPetProblem.cs" />
     <Compile Include="Contracts\IProblem.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Models\Pets\GoldFish.cs" />
     <Compile Include="Models\Pets\Turtle.cs" />
     <Compile Include="Models\Problem.cs" />
+    <Compile Include="Models\Stats\KnowledgeStats.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

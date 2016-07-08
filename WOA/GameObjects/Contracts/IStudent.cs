@@ -7,13 +7,13 @@ namespace GameObjects.Contracts
     {
         void HandleProblem(IProblem problem);
 
-        int Knowledge { get; }
+        IKnowledge Knowledge { get; }
 
         StudentType StudentType { get; }
 
         OtherCompetence OtherCompetence { get; }
 
-        void ReceiveKnowledge(int knowledge);
+        void ReceiveKnowledge(double knowledge);
 
         IPet Pet { get; }
     }

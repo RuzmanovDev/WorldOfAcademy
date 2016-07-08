@@ -8,6 +8,7 @@ using GameObjects.Contracts;
 using GameObjects.Enumerations;
 using GameObjects.Models.Abstract;
 using GameObjects.Common;
+using GameObjects.Models.Stats;
 
 namespace GameObjects.Models
 {
@@ -17,13 +18,13 @@ namespace GameObjects.Models
         private const int StudentTypeKnowedgeBooseKoef = 5;
         private const int Baseknowledge = 10;
 
-        private int knowledge;
-        private  readonly StudentType studentType;
+        private IKnowledge knowledge;
+        private readonly StudentType studentType;
         private readonly OtherCompetence otherCompetence;
         private readonly IPet pet;
 
-        public Student(string name,IPet pet)
-            : base(name,Student.StudentBaseHp)
+        public Student(string name, IPet pet)
+            : base(name, Student.StudentBaseHp)
         {
             // generate random number and cast it to enum
             int studentTypeRandGen = RandomProvider.Instance.Next(0, 2);
@@ -35,31 +36,21 @@ namespace GameObjects.Models
 
         }
 
-        private int GenerateInitialKnowedge(StudentType studentType)
+        private IKnowledge GenerateInitialKnowedge(StudentType studentType)
         {
-            int initial = 0;
-
-            if(studentType != StudentType.ThisYearStudent)
+            double initial = 0;
+            if (studentType != StudentType.ThisYearStudent)
             {
                 initial = 10;
             }
+            initial = RandomProvider.Instance.Next(10, 21) + initial + (int)this.OtherCompetence;
 
+            IKnowledge knowledge = new KnowledgeStats(initial);
 
-            return RandomProvider.Instance.Next(10, 21) + initial + (int)this.OtherCompetence;
+            return knowledge;
         }
 
-        public int Knowledge
-        {
-            get
-            {
-                return this.knowledge;
-            }
 
-            private set
-            {
-                this.knowledge = value;
-            }
-        }
 
         public StudentType StudentType
         {
@@ -85,6 +76,19 @@ namespace GameObjects.Models
             }
         }
 
+        public IKnowledge Knowledge
+        {
+            get
+            {
+                return this.knowledge;
+            }
+
+            private set
+            {
+                this.knowledge = value;
+            }
+        }
+
         public void HandleProblem(IProblem problem)
         {
             // vikame peta - toi ili pomaga ili ne 
@@ -99,9 +103,9 @@ namespace GameObjects.Models
             return $"Student Name: {this.Name} HP: {this.HP} StudentType: {this.studentType} Competence: {this.OtherCompetence} Pet: {this.Pet} Knowledge: {this.Knowledge}";
         }
 
-        public void ReceiveKnowledge(int knowledge)
+        public void ReceiveKnowledge(double knowledge)
         {
-            this.Knowledge += knowledge;
+            this.Knowledge.AddKnowledge(knowledge);
         }
 
         public void ReceiveHP(int hp)
