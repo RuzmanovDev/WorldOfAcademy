@@ -12,7 +12,7 @@
     public class Problem : IProblem
     {
         private readonly string name;
-        private readonly int dificulty;
+        private readonly double dificulty;
         private readonly ProblemType problemType;
 
         public Problem(string name, ProblemType problemType, int dificulty)
@@ -22,7 +22,7 @@
             this.dificulty = dificulty;
         }
 
-        public int Dificulty
+        public double Dificulty
         {
             get
             {

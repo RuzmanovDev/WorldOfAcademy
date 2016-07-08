@@ -6,7 +6,7 @@
     {
         string Name { get; }
 
-        int Dificulty { get; }
+        double Dificulty { get; }
 
         ProblemType ProblemType { get; }
 

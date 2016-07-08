@@ -12,7 +12,7 @@
     public class Exam : IExam
     {
         private readonly IEnumerable<IProblem> problemList;
-        private readonly int examDificulty = 0;
+        private readonly double examDificulty = 0;
         private readonly string examName;
 
         public Exam(string examName, IEnumerable<IProblem> problemList)
@@ -26,7 +26,7 @@
             }
         }
 
-        public int Dificulty
+        public double Dificulty
         {
             get
             {

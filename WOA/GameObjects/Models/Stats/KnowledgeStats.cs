@@ -29,5 +29,10 @@
         {
             this.Knowledge += knowledge;
         }
+
+        public override string ToString()
+        {
+            return $"{this.Knowledge}";
+        }
     }
 }
