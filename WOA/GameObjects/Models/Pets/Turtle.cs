@@ -15,11 +15,10 @@ namespace GameObjects.Models.Pets
         public Turtle(string name) : base(name)
         {
         }
-      
-        public override string HelpMe(IStudent student)
-        {
-            student.ReceiveKnowledge(Turtle.KnowledgeBoost);
 
+        public override string HelpMe(IKnowledge knowledge)
+        {
+            knowledge.AddKnowledge(KnowledgeBoost);
             return $"{this.ToString()} gives the student it's wisdom!!! The student receives {Turtle.KnowledgeBoost} knowledge!";
         }
     }

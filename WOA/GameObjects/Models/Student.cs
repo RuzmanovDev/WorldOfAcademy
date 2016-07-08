@@ -112,7 +112,7 @@
 
         public string GetHelp()
         {
-            return this.Pet.HelpMe(this);
+            return this.Pet.HelpMe(this.Knowledge);
         }
 
         public override string ToString()

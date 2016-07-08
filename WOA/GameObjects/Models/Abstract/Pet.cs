@@ -20,7 +20,7 @@
         }
 
         //TODO Maybe this shoud be void method and the string should be printed to another class
-        public abstract string HelpMe(IStudent student);
+        public abstract string HelpMe(IKnowledge knowledge);
 
         public override string ToString()
         {

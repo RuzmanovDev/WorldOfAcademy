@@ -110,10 +110,5 @@
             logger.WriteLine(result);
         }
 
-        public void OnTrowingExam(object sender, IStudent st)
-        {
-            string msg = st.Pet.HelpMe(st);
-            this.logger.WriteLine(msg);
-        }
     }
 }

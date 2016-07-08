@@ -4,6 +4,6 @@
 
     public interface IPet
     {
-        string HelpMe(IStudent student);
+        string HelpMe(IKnowledge knowledge);
     }
 }

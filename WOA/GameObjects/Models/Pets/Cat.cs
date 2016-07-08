@@ -16,11 +16,11 @@ namespace GameObjects.Models.Pets
         {
         }
 
-        public override string HelpMe(IStudent student)
+        public override string HelpMe(IKnowledge knowledge)
         {
-            student.ReceiveKnowledge(Cat.KnowledgeBoost);
-
+            knowledge.AddKnowledge(KnowledgeBoost);
             return $"{this.ToString()} ate the homework!! The student receives {Cat.KnowledgeBoost} knowledge!!";
         }
+
     }
 }
