@@ -10,8 +10,13 @@
     using Enumerations;
     using GameObjects.Models.Abstract;
 
+    public delegate void ExamStartEventHandler(object sender, IStudent st);
+
     public class Trainer : Human, ITrainer, IHuman
     {
+        //TODO add the event to the Itrainer
+        public event ExamStartEventHandler ExamStart; 
+
         private const int TrainerBaseHp = 100;
 
         private IExam exam;
@@ -37,7 +42,8 @@
         {
             foreach (var st in studentList)
             {
-                OnThrowingExam();
+                // TODO is this working
+                OnExamStart(st);
                // string str = st.Pet.HelpMe(st);
                 foreach (var pr in this.Exam.ProblemList)
                 {
@@ -47,7 +53,11 @@
         }
 
 
-
+        public virtual void OnExamStart(IStudent st)
+        {
+            if (ExamStart != null)
+                ExamStart(this, st);
+        }
         public override string ToString()
         {
             return $"Trainer Name: {this.Name}, Trainer Exams: {string.Join(Environment.NewLine, this.Exam)}";

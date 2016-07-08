@@ -106,7 +106,14 @@
 
             logger.WriteLine(GlobalMessages.TrainerThrowsExam(trainer.Name));
             trainer.ThrowExam(this.students);
+           // trainer.OnExamStart(this.students);
             ////
+        }
+
+        public void OnTrowingExam(object sender, IStudent st)
+        {
+            string msg = st.Pet.HelpMe(st);
+            this.logger.WriteLine(msg);
         }
     }
 }
