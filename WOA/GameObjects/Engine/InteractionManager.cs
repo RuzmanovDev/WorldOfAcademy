@@ -58,7 +58,7 @@
             IStudent student = this.studentFactory.CreateStudent(name, pet);
             this.students.Add(student);
 
-            this.trainers.Where(t => t.TrainerType == TrainerType.PreviousYears).ToList().ForEach(t => student.CantPassExam += ((IHelper)t).HelpMe);
+            student.CantPassExam += this.ExamFailsObserver;
 
             logger.WriteLine(GlobalMessages.StudentWasAded(name));
             //  logger.WriteLine(student.Pet.HelpMe(student)); // NE TUK!!!
@@ -116,7 +116,7 @@
 
         private void GeneratePreviousYearTrainers()
         {
-            int trainersCount = RandomProvider.Instance.Next(3);
+            int trainersCount = 2;//RandomProvider.Instance.Next(3);
 
             for (int i = 0; i < trainersCount; i++)
             {
@@ -124,6 +124,15 @@
                 this.trainers.Add(trainer);
             }
         }
+
+        private string ExamFailsObserver(IKnowledge knowledge)
+        {
+            var result = new StringBuilder();
+
+            this.trainers.Where(t => t.TrainerType == TrainerType.PreviousYears).ToList().ForEach(t => result.AppendLine(((IHelper)t).HelpMe(knowledge)));
+
+            return result.ToString();
+             }
     }
 }
 
