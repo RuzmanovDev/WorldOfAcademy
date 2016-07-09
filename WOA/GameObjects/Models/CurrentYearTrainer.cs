@@ -12,7 +12,7 @@
 
     // public delegate void ExamStartEventHandler(object sender, IStudent st);
 
-    public class CurrentYearTrainer : Trainer, ITrainer, IHuman
+    public class CurrentYearTrainer : Trainer, ICurrentYearTrainer, ITrainer, IHuman
     {
         //TODO add the event to the Itrainer
         //  public event ExamStartEventHandler ExamStart; 
@@ -47,10 +47,7 @@
             foreach (var st in studentList)
             {
                 resultFromTrowingExam.AppendLine(st.GetHelp());
-                foreach (var pr in this.Exam.ProblemList)
-                {
-                    resultFromTrowingExam.AppendLine(st.HandleProblem(pr));
-                }
+                resultFromTrowingExam.AppendLine(st.HandleExam(this.Exam));
             }
 
             return resultFromTrowingExam.ToString();

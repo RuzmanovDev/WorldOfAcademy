@@ -89,22 +89,23 @@
             }
         }
 
-        public string HandleProblem(IProblem problem)
+        public string HandleExam(IExam exam)
         {
             // vikame peta - toi ili pomaga ili ne 
             var resultFromHandlingTheProblem = new StringBuilder();
 
-            if (this.Knowledge.Knowledge > problem.Dificulty)
+            if (this.Knowledge.Knowledge > exam.Dificulty)
             {
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} has scored 100/100 at {problem.Name}");
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has scored 100/100 at {exam}");
                 // TODO: add hp
             }
             else
             {
-                int hpLost = this.HP - (int)problem.Dificulty;
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} failed at {problem.Name}");
+                int hpLost = (int)exam.Dificulty;
+                this.HP -= hpLost;
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} failed at {exam}");
                 resultFromHandlingTheProblem.AppendLine($"{this.Name} losses {hpLost}HP");
-                this.HP -= (int)problem.Dificulty;
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} HP -> {this.HP}HP");              
             }
 
             return resultFromHandlingTheProblem.ToString();

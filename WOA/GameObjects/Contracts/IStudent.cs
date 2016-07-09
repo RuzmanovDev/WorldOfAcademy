@@ -5,7 +5,7 @@
 
     public interface IStudent : IHuman
     {
-        string HandleProblem(IProblem problem);
+        string HandleExam(IExam exam);
 
         IKnowledge Knowledge { get; }
 
