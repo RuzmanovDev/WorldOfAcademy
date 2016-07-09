@@ -44,7 +44,7 @@
         {
             var exam = GenerateExam();
 
-            this.trainers.Add(this.trainerFactory.CreateTrainer(name, exam));
+            this.trainers.Add(this.trainerFactory.CreateCurrentYearTrainer(name, exam));
 
             logger.WriteLine(GlobalMessages.TrainerWasAdded(name));
             //  this.trainerFactory.CreateTrainer(trainer);

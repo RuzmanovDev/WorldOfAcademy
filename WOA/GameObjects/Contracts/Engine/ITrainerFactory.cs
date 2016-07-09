@@ -2,6 +2,7 @@
 {
     public interface ITrainerFactory
     {
-        ITrainer CreateTrainer(string name, IExam exam);
+        ITrainer CreateCurrentYearTrainer(string name, IExam exam);
+        ITrainer CreatePreviousTrainer(string name);
     }
 }
