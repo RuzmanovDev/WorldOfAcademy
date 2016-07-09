@@ -27,7 +27,6 @@
         private readonly IExamFactory examFactory = new ExamFactory();
 
 
-
         public InteractionManager(ILogger logger)
         {
             this.trainers = new HashSet<ITrainer>();
@@ -38,6 +37,8 @@
             this.petFactory = new PetFactory();
 
             this.logger = logger;
+
+            GeneratePreviousYearTrainers();
         }
 
 
@@ -56,6 +57,8 @@
             IPet pet = this.petFactory.CreatePet();
             IStudent student = this.studentFactory.CreateStudent(name, pet);
             this.students.Add(student);
+
+            this.trainers.Where(t => t.TrainerType == TrainerType.PreviousYears).ToList().ForEach(t => student.CantPassExam += ((IHelper)t).HelpMe);
 
             logger.WriteLine(GlobalMessages.StudentWasAded(name));
             //  logger.WriteLine(student.Pet.HelpMe(student)); // NE TUK!!!

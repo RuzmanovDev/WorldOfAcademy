@@ -22,6 +22,7 @@
         private readonly StudentType studentType;
         private readonly OtherCompetence otherCompetence;
         private readonly IPet pet;
+        public event Func<IKnowledge, string> CantPassExam;
 
         public Student(string name, IPet pet)
             : base(name, Student.StudentBaseHp)
@@ -93,28 +94,37 @@
         {
             // vikame peta - toi ili pomaga ili ne 
             var resultFromHandlingTheProblem = new StringBuilder();
+            resultFromHandlingTheProblem.AppendLine(this.GetHelpFromPet());
 
             if (this.Knowledge.Knowledge > exam.Dificulty)
             {
                 resultFromHandlingTheProblem.AppendLine($"{this.Name} has scored 100/100 at {exam}");
                 // TODO: add hp
+                return resultFromHandlingTheProblem.ToString();
             }
-            else
+
+
+            resultFromHandlingTheProblem.AppendLine(OnExamFail(this.knowledge));
+            if (this.Knowledge.Knowledge > exam.Dificulty)
             {
-                int hpLost = (int)exam.Dificulty;
-                this.HP -= hpLost;
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} failed at {exam}");
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} losses {hpLost}HP");
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} HP -> {this.HP}HP");              
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has scored 100/100 at {exam}");
+                // TODO: add hp
+                return resultFromHandlingTheProblem.ToString();
+
             }
+
+
+            int hpLost = (int)exam.Dificulty;
+            this.HP -= hpLost;
+            resultFromHandlingTheProblem.AppendLine($"{this.Name} failed at {exam}");
+            resultFromHandlingTheProblem.AppendLine($"{this.Name} losses {hpLost}HP");
+            resultFromHandlingTheProblem.AppendLine($"{this.Name} HP -> {this.HP}HP");
+
 
             return resultFromHandlingTheProblem.ToString();
         }
 
-        public string GetHelp()
-        {
-            return this.Pet.HelpMe(this.Knowledge);
-        }
+
 
         public override string ToString()
         {
@@ -129,6 +139,22 @@
         public void ReceiveHP(int hp)
         {
             this.HP += hp;
+        }
+
+        private string GetHelpFromPet()
+        {
+            return this.Pet.HelpMe(this.Knowledge);
+        }
+
+        protected virtual string OnExamFail(IKnowledge knowledg)
+        {
+            Func<IKnowledge, string> handler = CantPassExam;
+            if (handler != null)
+            {
+                return handler(knowledg);
+            }
+
+            return string.Empty;
         }
     }
 }

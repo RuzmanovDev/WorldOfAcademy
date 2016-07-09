@@ -46,7 +46,6 @@
 
             foreach (var st in studentList)
             {
-                resultFromTrowingExam.AppendLine(st.GetHelp());
                 resultFromTrowingExam.AppendLine(st.HandleExam(this.Exam));
             }
 

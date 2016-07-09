@@ -2,6 +2,7 @@
 {
     using GameObjects.Contracts;
     using GameObjects.Enumerations;
+    using System;
 
     public interface IStudent : IHuman
     {
@@ -17,6 +18,6 @@
 
         IPet Pet { get; }
 
-        string GetHelp();
+        event Func<IKnowledge, string> CantPassExam;
     }
 }
