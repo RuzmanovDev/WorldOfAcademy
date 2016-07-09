@@ -12,7 +12,6 @@
     public class Exam : IExam
     {
         private readonly IEnumerable<IProblem> problemList;
-        private readonly double examDificulty = 0;
         private readonly string examName;
 
         public Exam(string examName, IEnumerable<IProblem> problemList)
@@ -20,17 +19,14 @@
             this.examName = examName;
             this.problemList = problemList;
 
-            foreach (var problem in this.problemList)
-            {
-                examDificulty += problem.Dificulty;
-            }
+
         }
 
         public double Dificulty
         {
             get
             {
-                return this.examDificulty;
+                return this.problemList.Average(p => p.Dificulty);
             }
         }
 

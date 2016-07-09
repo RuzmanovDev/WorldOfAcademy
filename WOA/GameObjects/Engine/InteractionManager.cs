@@ -12,6 +12,7 @@
     using Enumerations;
     using Common.GlobalMessages;    // does most of the work maybe split it to smaller classes 
     using Common.GlobalErrorMessages;
+    using Common;
 
     public class InteractionManager : IInteractionManager
     {
@@ -26,7 +27,6 @@
         private readonly IExamFactory examFactory = new ExamFactory();
 
 
-
         public InteractionManager(ILogger logger)
         {
             this.trainers = new HashSet<ITrainer>();
@@ -37,6 +37,8 @@
             this.petFactory = new PetFactory();
 
             this.logger = logger;
+
+            GeneratePreviousYearTrainers();
         }
 
 
@@ -44,7 +46,7 @@
         {
             var exam = GenerateExam();
 
-            this.trainers.Add(this.trainerFactory.CreateTrainer(name, exam));
+            this.trainers.Add(this.trainerFactory.CreateCurrentYearTrainer(name, exam));
 
             logger.WriteLine(GlobalMessages.TrainerWasAdded(name));
             //  this.trainerFactory.CreateTrainer(trainer);
@@ -55,6 +57,8 @@
             IPet pet = this.petFactory.CreatePet();
             IStudent student = this.studentFactory.CreateStudent(name, pet);
             this.students.Add(student);
+
+            student.CantPassExam += this.ExamFailsObserver;
 
             logger.WriteLine(GlobalMessages.StudentWasAded(name));
             //  logger.WriteLine(student.Pet.HelpMe(student)); // NE TUK!!!
@@ -94,13 +98,13 @@
 
         public void StartExam(string trainerName)
         {
-            ITrainer trainer = null;
+            ICurrentYearTrainer trainer = null;
 
             foreach (var tr in this.trainers)
             {
                 if (tr.Name == trainerName)
                 {
-                    trainer = tr;
+                    trainer = tr as ICurrentYearTrainer;
                 }
             }
 
@@ -110,5 +114,25 @@
             logger.WriteLine(result);
         }
 
+        private void GeneratePreviousYearTrainers()
+        {
+            int trainersCount = 2;//RandomProvider.Instance.Next(3);
+
+            for (int i = 0; i < trainersCount; i++)
+            {
+                var trainer = this.trainerFactory.CreatePreviousTrainer();
+                this.trainers.Add(trainer);
+            }
+        }
+
+        private string ExamFailsObserver(IKnowledge knowledge)
+        {
+            var result = new StringBuilder();
+
+            this.trainers.Where(t => t.TrainerType == TrainerType.PreviousYears).ToList().ForEach(t => result.AppendLine(((IHelper)t).HelpMe(knowledge)));
+
+            return result.ToString();
+             }
     }
 }
+

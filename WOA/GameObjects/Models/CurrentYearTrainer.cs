@@ -12,17 +12,17 @@
 
     // public delegate void ExamStartEventHandler(object sender, IStudent st);
 
-    public class Trainer : Human, ITrainer, IHuman
+    public class CurrentYearTrainer : Trainer, ICurrentYearTrainer, ITrainer, IHuman
     {
         //TODO add the event to the Itrainer
         //  public event ExamStartEventHandler ExamStart; 
 
-        private const int TrainerBaseHp = 100;
+        
 
         private IExam exam;
 
-        public Trainer(string name, IExam exam)
-            : base(name, Trainer.TrainerBaseHp)
+        public CurrentYearTrainer(string name, IExam exam)
+            : base(name, TrainerType.CurrentYear)
         {
             this.exam = exam;
         }
@@ -36,7 +36,7 @@
         }
 
 
-        public TrainerType trainerType { get; protected set; }
+
 
         public string ThrowExam(IEnumerable<IStudent> studentList)
         {
@@ -46,11 +46,7 @@
 
             foreach (var st in studentList)
             {
-                resultFromTrowingExam.AppendLine(st.GetHelp());
-                foreach (var pr in this.Exam.ProblemList)
-                {
-                    resultFromTrowingExam.AppendLine(st.HandleProblem(pr));
-                }
+                resultFromTrowingExam.AppendLine(st.HandleExam(this.Exam));
             }
 
             return resultFromTrowingExam.ToString();

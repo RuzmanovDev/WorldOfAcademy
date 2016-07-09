@@ -2,10 +2,11 @@
 {
     using GameObjects.Contracts;
     using GameObjects.Enumerations;
+    using System;
 
     public interface IStudent : IHuman
     {
-        string HandleProblem(IProblem problem);
+        string HandleExam(IExam exam);
 
         IKnowledge Knowledge { get; }
 
@@ -17,6 +18,6 @@
 
         IPet Pet { get; }
 
-        string GetHelp();
+        event Func<IKnowledge, string> CantPassExam;
     }
 }

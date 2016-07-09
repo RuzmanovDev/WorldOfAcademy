@@ -1,7 +1,6 @@
 ﻿namespace GameObjects.Contracts
 {
-    public interface IPet
+    public interface IPet : IHelper
     {
-        string HelpMe(IKnowledge knowledge);
     }
 }
