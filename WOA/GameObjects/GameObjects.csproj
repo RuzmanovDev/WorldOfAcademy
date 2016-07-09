@@ -53,6 +53,7 @@
     <Compile Include="Contracts\Engine\ITrainerFactory.cs" />
     <Compile Include="Contracts\ICreature.cs" />
     <Compile Include="Contracts\IExam.cs" />
+    <Compile Include="Contracts\IHelper.cs" />
     <Compile Include="Contracts\IHuman.cs" />
     <Compile Include="Contracts\IKnowledge.cs" />
     <Compile Include="Contracts\IPet.cs" />
