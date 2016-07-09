@@ -11,7 +11,7 @@
     {
         public ITrainer CreateTrainer(string name, IExam exam)
         {
-            return new Trainer(name, exam);
+            return new CurrentYearTrainer(name, exam);
         }
     }
 }

@@ -94,13 +94,13 @@
 
         public void StartExam(string trainerName)
         {
-            ITrainer trainer = null;
+            ICurrentYearTrainer trainer = null;
 
             foreach (var tr in this.trainers)
             {
                 if (tr.Name == trainerName)
                 {
-                    trainer = tr;
+                    trainer = tr as ICurrentYearTrainer;
                 }
             }
 

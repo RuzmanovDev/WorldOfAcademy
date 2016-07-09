@@ -52,6 +52,7 @@
     <Compile Include="Contracts\Engine\IStudentFactory.cs" />
     <Compile Include="Contracts\Engine\ITrainerFactory.cs" />
     <Compile Include="Contracts\ICreature.cs" />
+    <Compile Include="Contracts\ICurrentYearTrainer.cs" />
     <Compile Include="Contracts\IExam.cs" />
     <Compile Include="Contracts\IHelper.cs" />
     <Compile Include="Contracts\IHuman.cs" />
@@ -75,16 +76,18 @@
     <Compile Include="Enumerations\TrainerType.cs" />
     <Compile Include="Models\Abstract\Creature.cs" />
     <Compile Include="Models\Abstract\Human.cs" />
+    <Compile Include="Models\Abstract\Trainer.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\Abstract\Pet.cs" />
     <Compile Include="Models\Pets\Cat.cs" />
     <Compile Include="Models\Pets\Dog.cs" />
     <Compile Include="Models\Pets\GoldFish.cs" />
     <Compile Include="Models\Pets\Turtle.cs" />
+    <Compile Include="Models\PreviousYearTrainer.cs" />
     <Compile Include="Models\Problem.cs" />
     <Compile Include="Models\Stats\KnowledgeStats.cs" />
     <Compile Include="Models\Student.cs" />
-    <Compile Include="Models\Trainer.cs" />
+    <Compile Include="Models\CurrentYearTrainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

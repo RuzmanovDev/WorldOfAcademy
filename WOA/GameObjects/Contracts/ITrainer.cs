@@ -5,10 +5,6 @@
 
     public interface ITrainer : IHuman
     {
-        TrainerType trainerType { get; }
-
-        IExam Exam { get; }
-
-        string ThrowExam(IEnumerable<IStudent> st);
+        TrainerType TrainerType { get; }
     }
 }

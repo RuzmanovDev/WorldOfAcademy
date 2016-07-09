@@ -2,7 +2,7 @@
 {
     public enum TrainerType
     {
-        Current,
+        CurrentYear,
         PreviousYears
     }
 }
