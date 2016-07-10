@@ -99,8 +99,8 @@
             if (this.Knowledge.Knowledge > exam.Dificulty)
             {
                 resultFromHandlingTheProblem.AppendLine($"{this.Name} has aced {exam}");
-                // when the exam is tanked the student is restored to full HP
-                this.HP = StudentBaseHp;
+                // when the student passes the exam he is healed == exam dificulty as int
+                this.ReceiveHP((int)exam.Dificulty);
                 return resultFromHandlingTheProblem.ToString();
             }
 
@@ -109,8 +109,8 @@
             if (this.Knowledge.Knowledge > exam.Dificulty)
             {
                 resultFromHandlingTheProblem.AppendLine($"{this.Name} has aced at {exam}");
-                // when the exam is tanked the student is restored to full HP
-                this.HP = StudentBaseHp;
+                // when the student passes the exam he is healed == exam dificulty as int
+                this.ReceiveHP((int)exam.Dificulty);
                 return resultFromHandlingTheProblem.ToString();
 
             }
