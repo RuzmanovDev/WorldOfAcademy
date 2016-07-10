@@ -8,7 +8,7 @@
 
     public class PreviousYearTrainer : Trainer, ITrainer, IHelper
     {
-        private const int KnowledgeBoost = 10;
+        private const int KnowledgeBoost = 3;
 
         public PreviousYearTrainer(string name)
             :base(name, TrainerType.PreviousYears)

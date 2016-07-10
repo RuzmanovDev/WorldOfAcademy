@@ -31,8 +31,9 @@
             this.otherCompetence = otherCompetance;
             this.Knowledge = knowledge;
             this.pet = pet;
-
+            this.IsAlive = true;
         }
+        
 
         public StudentType StudentType
         {
@@ -79,7 +80,7 @@
 
             if (this.Knowledge.Knowledge > exam.Dificulty)
             {
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} has aced {exam}");
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has paced {exam}");
                 // when the student passes the exam he is healed == exam dificulty as int
                 this.ReceiveHP((int)exam.Dificulty);
                 return resultFromHandlingTheProblem.ToString();
@@ -89,7 +90,7 @@
             resultFromHandlingTheProblem.AppendLine(OnExamFail(this.knowledge));
             if (this.Knowledge.Knowledge > exam.Dificulty)
             {
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} has aced at {exam}");
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has paced at {exam}");
                 // when the student passes the exam he is healed == exam dificulty as int
                 this.ReceiveHP((int)exam.Dificulty);
                 return resultFromHandlingTheProblem.ToString();
@@ -103,7 +104,11 @@
             resultFromHandlingTheProblem.AppendLine($"{this.Name} losses {hpLost}HP");
             resultFromHandlingTheProblem.AppendLine($"{this.Name} HP -> {this.HP}HP");
 
-
+            if (this.HP <= 0)
+            {
+                this.IsAlive = false;
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} cant take it any more, he will try SoftUni");
+            }
             return resultFromHandlingTheProblem.ToString();
         }
 

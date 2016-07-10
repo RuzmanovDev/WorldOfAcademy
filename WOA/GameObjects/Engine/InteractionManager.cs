@@ -108,15 +108,23 @@
                 }
             }
 
-            logger.WriteLine(GlobalMessages.TrainerThrowsExam(trainer.Name));
-            var result = trainer.ThrowExam(this.students);
+            if (trainer != null && trainer.IsAlive)
+            {
+                logger.WriteLine(GlobalMessages.TrainerThrowsExam(trainer.Name));
+                var result = trainer.ThrowExam(this.students);
 
-            logger.WriteLine(result);
+                logger.WriteLine(result);
+            }
+            else
+            {
+                logger.WriteLine($"ther is no alive trainer whit name {trainerName}");
+            }
+            
         }
 
         private void GeneratePreviousYearTrainers()
         {
-            int trainersCount = 2;//RandomProvider.Instance.Next(3);
+            int trainersCount = RandomProvider.Instance.Next(3);
 
             for (int i = 0; i < trainersCount; i++)
             {

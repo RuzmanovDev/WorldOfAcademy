@@ -31,7 +31,7 @@
         }
 
 
-
+        
 
         public string ThrowExam(IEnumerable<IStudent> studentList)
         {
@@ -41,9 +41,19 @@
 
             foreach (var st in studentList)
             {
-                resultFromTrowingExam.AppendLine(st.HandleExam(this.Exam));
+                if (st.IsAlive)
+                {
+                    resultFromTrowingExam.AppendLine(st.HandleExam(this.Exam));
+                }
+                else
+                {
+                    resultFromTrowingExam.AppendLine($"{st.Name} is too stupid for this exam");
+                }
             }
-
+            if (this.HP <= 0)
+            {
+                this.IsAlive = false;
+            }
             return resultFromTrowingExam.ToString();
         }
 

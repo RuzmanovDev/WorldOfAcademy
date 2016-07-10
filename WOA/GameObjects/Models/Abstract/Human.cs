@@ -18,6 +18,7 @@ using System.Threading.Tasks;
             : base(name)
         {
             this.HP = hp;
+            this.IsAlive = true;
         }
 
 
@@ -34,6 +35,6 @@ using System.Threading.Tasks;
             }
         }
 
-       
+        public  bool IsAlive { get; protected set; }
     }
 }

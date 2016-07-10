@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameObjects.Contracts
 {
-    interface ICurrentYearTrainer : ITrainer, IHuman
+    interface ICurrentYearTrainer : ITrainer
     {
         IExam Exam { get; }
 

@@ -8,7 +8,7 @@
 
     public class TrainerFactory : ITrainerFactory
     {
-        private string[] trainerNames = { "Ivo Kenov", "Niki Kostov"};
+        private string[] trainerNames = { "Ivo Kenov", "Niki Kostov", "Svetlin Nakov", "Joro Marginite"};
 
         public ITrainer CreateCurrentYearTrainer(string name, IExam exam)
         {
