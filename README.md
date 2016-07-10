@@ -3,6 +3,18 @@ Teamwork in C# OOP Course in Telerik Academy 2016-2017 Season.
 
 **WOA** is a RPG console based game
 
+The life in the academy is hard... It is getting even harder when the time for exam comes.
+In our game there are two main Characters: Student and trainers.
+Students are different types, they have different competences. They also have pets which can help them(in most cases).
+Trainers can be two types: trainers from the current season and trainers from previous seasons(retired).
+The main difference between them is that current season trainers can assign exams and previous season trainers can be called by students when they need help.
+
+Currently supported commands:
+create trainer {name}
+create student {name}
+status {name}
+startexam {trainer-name}
+
 **Developed by:**
 
 |       Name       | http://telerikacademy.com username |              https://github.com username              |
