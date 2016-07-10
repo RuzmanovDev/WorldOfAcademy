@@ -27,4 +27,4 @@ startexam {trainer-name}<br />
 |Nikolay Vulchanov |           NValchanov               |                                                       |
 | Georgi Georgiev  |           GeorgiIMG                |                                                       |
 
-![Alt text]https://raw.githubusercontent.com/Team-Kabal-OOP/WorldOfAcademy/master/WOA/GameObjects/ClassDiagram1.cd
+![Alt text](https://raw.githubusercontent.com/Team-Kabal-OOP/WorldOfAcademy/master/WOA/GameObjects/ClassDiagram1.cd)
