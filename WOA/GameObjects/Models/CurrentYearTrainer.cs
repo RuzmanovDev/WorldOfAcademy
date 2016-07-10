@@ -9,16 +9,11 @@
     using GameObjects.Contracts;
     using Enumerations;
     using GameObjects.Models.Abstract;
-
-    // public delegate void ExamStartEventHandler(object sender, IStudent st);
+    using System.Threading;
 
     public class CurrentYearTrainer : Trainer, ICurrentYearTrainer, ITrainer, IHuman
     {
-        //TODO add the event to the Itrainer
-        //  public event ExamStartEventHandler ExamStart; 
-
-        
-
+     
         private IExam exam;
 
         public CurrentYearTrainer(string name, IExam exam)
@@ -51,13 +46,6 @@
 
             return resultFromTrowingExam.ToString();
         }
-
-
-        //public virtual void OnExamStart(IStudent st)
-        //{
-        //    if (ExamStart != null)
-        //        ExamStart(this, st);
-        //}
 
         public override string ToString()
         {

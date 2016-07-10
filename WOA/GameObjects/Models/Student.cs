@@ -11,7 +11,7 @@
     using GameObjects.Models.Abstract;
     using GameObjects.Common;
     using GameObjects.Models.Stats;
-
+    using System.Threading;
     public class Student : Human, IStudent
     {
         private const int StudentBaseHp = 100;
