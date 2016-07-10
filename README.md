@@ -26,3 +26,5 @@ startexam {trainer-name}<br />
 |  Petur Ganchev   |           peturganchev             |    [peturganchev](https://github.com/peturganchev)    |
 |Nikolay Vulchanov |           NValchanov               |                                                       |
 | Georgi Georgiev  |           GeorgiIMG                |                                                       |
+
+![]https://raw.githubusercontent.com/Team-Kabal-OOP/WorldOfAcademy/master/WOA/GameObjects/ClassDiagram1.cd
