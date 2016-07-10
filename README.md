@@ -1,4 +1,4 @@
-# World of Academy
+[# World of Academy](https://github.com/Team-Kabal-OOP/WorldOfAcademy)
 Teamwork in C# OOP Course in Telerik Academy 2016-2017 Season.
 
 **WOA** is a RPG console based game
@@ -27,5 +27,4 @@ startexam {trainer-name}<br />
 |Nikolay Vulchanov |           NValchanov               |                                                       |
 | Georgi Georgiev  |           GeorgiIMG                |                                                       |
 
-![Alt text](https://raw.githubusercontent.com/Team-Kabal-OOP/WorldOfAcademy/master/WOA/WOAClassDiagram.png) <br />
-[To the repo ](https://github.com/Team-Kabal-OOP/WorldOfAcademy)
+![Alt text](https://raw.githubusercontent.com/Team-Kabal-OOP/WorldOfAcademy/master/WOA/WOAClassDiagram.png)
