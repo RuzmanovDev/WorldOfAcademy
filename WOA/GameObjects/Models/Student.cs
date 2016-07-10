@@ -24,34 +24,15 @@
         private readonly IPet pet;
         public event Func<IKnowledge, string> CantPassExam;
 
-        public Student(string name, IPet pet)
+        public Student(string name, IPet pet, StudentType studentType, OtherCompetence otherCompetance, IKnowledge knowledge)
             : base(name, Student.StudentBaseHp)
         {
-            // generate random number and cast it to enum
-            int studentTypeRandGen = RandomProvider.Instance.Next(0, 2);
-
-            this.studentType = (StudentType)studentTypeRandGen;
-            this.Knowledge = GenerateInitialKnowedge(this.StudentType);
-            this.otherCompetence = (OtherCompetence)RandomProvider.Instance.Next(0, 5);
+            this.studentType = studentType;
+            this.otherCompetence = otherCompetance;
+            this.Knowledge = knowledge;
             this.pet = pet;
 
         }
-
-        private IKnowledge GenerateInitialKnowedge(StudentType studentType)
-        {
-            double initial = 0;
-            if (studentType != StudentType.ThisYearStudent)
-            {
-                initial = 10;
-            }
-            initial = RandomProvider.Instance.Next(10, 21) + initial + (int)this.OtherCompetence;
-
-            IKnowledge knowledge = new KnowledgeStats(initial);
-
-            return knowledge;
-        }
-
-
 
         public StudentType StudentType
         {
