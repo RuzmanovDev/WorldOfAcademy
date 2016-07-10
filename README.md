@@ -28,4 +28,4 @@ startexam {trainer-name}<br />
 | Georgi Georgiev  |           GeorgiIMG                |                                                       |
 
 ![Alt text](https://raw.githubusercontent.com/Team-Kabal-OOP/WorldOfAcademy/master/WOA/WOAClassDiagram.png)<br />
-[Source code]((https://github.com/Team-Kabal-OOP/WorldOfAcademy))
+[Source code](https://github.com/Team-Kabal-OOP/WorldOfAcademy)
