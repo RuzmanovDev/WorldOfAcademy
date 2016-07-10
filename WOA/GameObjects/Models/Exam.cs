@@ -19,7 +19,6 @@
             this.examName = examName;
             this.problemList = problemList;
 
-
         }
 
         public double Dificulty
@@ -46,10 +45,6 @@
             }
         }
 
-        public void RestoreHP(IStudent student)
-        {
-            throw new NotImplementedException();
-        }
 
         public override string ToString()
         {

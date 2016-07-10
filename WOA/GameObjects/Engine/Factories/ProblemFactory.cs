@@ -15,7 +15,7 @@
     class ProblemFactory : IProblemFactory
     {
         private const int ProblemTypeMaxCount = 9;
-        private const int DificultyCoeff = 2;
+        private const int DificultyCoeff = 5;
 
         public IProblem CreateProblem()
         {

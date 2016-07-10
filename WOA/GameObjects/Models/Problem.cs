@@ -50,7 +50,7 @@
         public void GiveKnowledge(IStudent st)
         {
             // TODO maybe another formula --- Dificulty / 10
-            st.ReceiveKnowledge(this.Dificulty / 10);
+            st.ReceiveKnowledge(this.Dificulty / 5);
         }
 
         public override string ToString()

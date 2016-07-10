@@ -92,14 +92,15 @@
 
         public string HandleExam(IExam exam)
         {
-            // vikame peta - toi ili pomaga ili ne 
+            // Call the pet to help or not
             var resultFromHandlingTheProblem = new StringBuilder();
             resultFromHandlingTheProblem.AppendLine(this.GetHelpFromPet());
 
             if (this.Knowledge.Knowledge > exam.Dificulty)
             {
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} has scored 100/100 at {exam}");
-                // TODO: add hp
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has aced {exam}");
+                // when the exam is tanked the student is restored to full HP
+                this.HP = StudentBaseHp;
                 return resultFromHandlingTheProblem.ToString();
             }
 
@@ -107,8 +108,9 @@
             resultFromHandlingTheProblem.AppendLine(OnExamFail(this.knowledge));
             if (this.Knowledge.Knowledge > exam.Dificulty)
             {
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} has scored 100/100 at {exam}");
-                // TODO: add hp
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has aced at {exam}");
+                // when the exam is tanked the student is restored to full HP
+                this.HP = StudentBaseHp;
                 return resultFromHandlingTheProblem.ToString();
 
             }
