@@ -10,7 +10,7 @@
     using Contracts.Engine;
     using Factories;
     using Enumerations;
-    using Common.GlobalMessages;    // does most of the work maybe split it to smaller classes 
+    using Common.GlobalMessages;   
     using Common.GlobalErrorMessages;
     using Common;
 
@@ -117,7 +117,7 @@
             }
             else
             {
-                logger.WriteLine($"ther is no alive trainer whit name {trainerName}");
+                logger.WriteLine($"ther is no alive trainer with name {trainerName}");
             }
             
         }
