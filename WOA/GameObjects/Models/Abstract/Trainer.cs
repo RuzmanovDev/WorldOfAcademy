@@ -1,6 +1,5 @@
 ﻿namespace GameObjects.Models.Abstract
 {
-    using System;
     using Contracts;
     using GameObjects.Enumerations;
 

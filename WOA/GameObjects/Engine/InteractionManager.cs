@@ -1,16 +1,14 @@
 ﻿namespace GameObjects.Engine
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
 
     using Contracts;
     using Contracts.Engine;
     using Factories;
     using Enumerations;
-    using Common.GlobalMessages;   
+    using Common.GlobalMessages;
     using Common.GlobalErrorMessages;
     using Common;
 

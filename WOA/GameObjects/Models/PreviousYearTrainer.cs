@@ -1,10 +1,9 @@
 ﻿namespace GameObjects.Models
 {
 
-    using GameObjects.Contracts;
-    using Enumerations;
     using Abstract;
-    using System;
+    using Enumerations;
+    using GameObjects.Contracts;
 
     public class PreviousYearTrainer : Trainer, ITrainer, IHelper
     {

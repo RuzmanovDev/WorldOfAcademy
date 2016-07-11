@@ -1,13 +1,10 @@
 ﻿namespace GameObjects.Models
 {
-    using Contracts;
     using System;
     using System.Collections.Generic;
-
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using Enumerations;
+
+    using Contracts;
 
     public class Exam : IExam
     {

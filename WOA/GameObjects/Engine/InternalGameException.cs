@@ -1,6 +1,5 @@
 ﻿namespace GameObjects.Engine
 {
-
     using System;
 
     public class InternalGameException : ApplicationException

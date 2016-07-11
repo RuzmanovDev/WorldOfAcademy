@@ -1,15 +1,9 @@
 ﻿namespace GameObjects.Engine
 {
-    using Common.GlobalErrorMessages;
-    using Contracts.Engine;
-    using Enumerations;
     using System;
 
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
+    using Contracts.Engine;
 
-    // parse the commands and pass them to the interaction manager
     public class CommandManager
     {
         public CommandManager(IInteractionManager interactionManager)

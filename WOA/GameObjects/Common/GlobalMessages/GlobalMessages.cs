@@ -1,12 +1,5 @@
 ﻿namespace GameObjects.Common.GlobalMessages
 {
-using GameObjects.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
     public static class GlobalMessages
     {
         public static string StudentWasAded(string name)
@@ -23,10 +16,5 @@ using System.Threading.Tasks;
         {
             return $"--Trainer {name} gives exam to students";
         }
-
-        //public static string PetHelps(IPet pet)
-        //{
-        //    return $"-- {pet.ToString()}";
-        //}
     }
 }

@@ -1,6 +1,5 @@
 ﻿namespace GameObjects.Models.Stats
 {
-    using System;
     using GameObjects.Contracts;
 
     public class KnowledgeStats : IKnowledge

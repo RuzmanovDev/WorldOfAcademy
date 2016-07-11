@@ -1,6 +1,5 @@
 ﻿namespace GameObjects.Engine.Factories
 {
-    using System;
     using Contracts;
     using GameObjects.Contracts.Engine;
     using Models;

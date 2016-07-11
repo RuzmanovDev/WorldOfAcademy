@@ -1,14 +1,9 @@
 ﻿namespace GameObjects.Engine.Factories
 {
-using GameObjects.Contracts.Engine;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameObjects.Contracts;
-using GameObjects.Common;
-using GameObjects.Models.Pets;
+    using GameObjects.Contracts.Engine;
+    using GameObjects.Contracts;
+    using GameObjects.Common;
+    using GameObjects.Models.Pets;
 
     public class PetFactory : IPetFactory
     {

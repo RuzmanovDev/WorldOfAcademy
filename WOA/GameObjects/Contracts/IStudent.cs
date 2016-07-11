@@ -1,8 +1,9 @@
 ﻿namespace GameObjects.Contracts
 {
+    using System;
+
     using GameObjects.Contracts;
     using GameObjects.Enumerations;
-    using System;
 
     public interface IStudent : IHuman
     {

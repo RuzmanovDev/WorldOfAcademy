@@ -2,14 +2,11 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
 
     using GameObjects.Contracts;
     using Enumerations;
     using GameObjects.Models.Abstract;
-    using System.Threading;
 
     public class CurrentYearTrainer : Trainer, ICurrentYearTrainer, ITrainer, IHuman
     {
