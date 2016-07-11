@@ -117,7 +117,7 @@
             }
             else
             {
-                logger.WriteLine($"ther is no alive trainer with name {trainerName}");
+                logger.WriteLine($"There is no alive trainer with name {trainerName}");
             }
             
         }
