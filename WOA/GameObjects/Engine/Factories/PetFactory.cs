@@ -30,7 +30,7 @@ using GameObjects.Models.Pets;
                 case 2: return new Dog(petName);
                 case 3: return new GoldFish(petName);
                 case 4: return new Turtle(petName);
-                default: throw new ArgumentException("There is no such pet");
+                default: throw new InternalGameException("There is no such pet");
             }
         }
 

@@ -11,7 +11,7 @@
   <Class Name="GameObjects.Models.Abstract.Human" Collapsed="true">
     <Position X="3.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>Models\Abstract\Human.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -203,6 +203,13 @@
       <FileName>Common\Validator.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="GameObjects.Engine.InternalGameException" Collapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\InternalGameException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="GameObjects.Contracts.Engine.IExamFactory" Collapsed="true">
     <Position X="18.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
@@ -283,7 +290,7 @@
   <Interface Name="GameObjects.Contracts.IHuman" Collapsed="true">
     <Position X="3" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Contracts\IHuman.cs</FileName>
     </TypeIdentifier>
   </Interface>

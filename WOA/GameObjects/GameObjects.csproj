@@ -70,6 +70,7 @@
     <Compile Include="Engine\Factories\StudentFactory.cs" />
     <Compile Include="Engine\Factories\TrainerFactory.cs" />
     <Compile Include="Engine\InteractionManager.cs" />
+    <Compile Include="Engine\InternalGameException.cs" />
     <Compile Include="Enumerations\OtherCompetence.cs" />
     <Compile Include="Enumerations\ProblemType.cs" />
     <Compile Include="Enumerations\StudentType.cs" />
