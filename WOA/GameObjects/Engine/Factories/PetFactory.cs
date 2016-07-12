@@ -1,15 +1,10 @@
-﻿using GameObjects.Contracts.Engine;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameObjects.Contracts;
-using GameObjects.Common;
-using GameObjects.Models.Pets;
-
-namespace GameObjects.Engine.Factories
+﻿namespace GameObjects.Engine.Factories
 {
+    using GameObjects.Contracts.Engine;
+    using GameObjects.Contracts;
+    using GameObjects.Common;
+    using GameObjects.Models.Pets;
+
     public class PetFactory : IPetFactory
     {
         private int NumberOfPetsSoFar = 4;
@@ -30,7 +25,7 @@ namespace GameObjects.Engine.Factories
                 case 2: return new Dog(petName);
                 case 3: return new GoldFish(petName);
                 case 4: return new Turtle(petName);
-                default: throw new ArgumentException("There is no such pet");
+                default: throw new InternalGameException("There is no such pet");
             }
         }
 

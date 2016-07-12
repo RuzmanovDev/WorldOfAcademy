@@ -1,11 +1,5 @@
 ﻿namespace GameObjects.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
     using Contracts;
     using Enumerations;
 
@@ -50,7 +44,7 @@
         public void GiveKnowledge(IStudent st)
         {
             // TODO maybe another formula --- Dificulty / 10
-            st.ReceiveKnowledge(this.Dificulty / 10);
+            st.ReceiveKnowledge(this.Dificulty / 5);
         }
 
         public override string ToString()

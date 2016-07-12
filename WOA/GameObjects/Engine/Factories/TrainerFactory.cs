@@ -1,18 +1,27 @@
 ﻿namespace GameObjects.Engine.Factories
 {
-    using System;
-
     using Contracts;
     using GameObjects.Contracts.Engine;
-    using System.Collections.Generic;
-    using Enumerations;
     using Models;
+    using Common;
+
     public class TrainerFactory : ITrainerFactory
     {
-        public ITrainer CreateTrainer(string name, IExam exam)
+        private string[] trainerNames = { "Ivo Kenov", "Niki Kostov", "Svetlin Nakov", "Joro Marginite"};
+
+        public ITrainer CreateCurrentYearTrainer(string name, IExam exam)
         {
-            return new Trainer(name, exam);
+            return new CurrentYearTrainer(name, exam);
         }
 
+        public ITrainer CreatePreviousTrainer()
+        {
+            return new PreviousYearTrainer(this.GenerateTrainerName());
+        }
+
+        private string GenerateTrainerName()
+        {
+            return trainerNames[RandomProvider.Instance.Next(trainerNames.Length)];
+        }
     }
 }

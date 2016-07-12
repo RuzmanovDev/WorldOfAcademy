@@ -1,6 +1,6 @@
 ﻿namespace GameObjects.Contracts
 {
-    using GameObjects.Enumerations;
+    using Enumerations;
 
     public interface IProblem
     {

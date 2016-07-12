@@ -14,12 +14,6 @@
     {
         public static void Main(string[] args)
         {
-            //IStudentFactory studentFactory = GetStudentFactory();
-            //ITrainerFactory trainerFactory = GetTrainerFactory();
-            //IAblityFactory abilityFactory = GetAbilityFactory();
-
-      
-            // TODO: extract interface for commandManager
             ILogger logger = new ConsoleLogger();
 
             IInteractionManager interactionManager = new InteractionManager(logger);
@@ -37,23 +31,7 @@
                 {
                     return;
                 }
-
             }
         }
-
-        //private static IStudentFactory GetStudentFactory()
-        //{
-        //    return new StudentFactory();
-        //}
-
-        //private static ITrainerFactory GetTrainerFactory()
-        //{
-        //    return new TrainerFactory();
-        //}
-
-        //private static IAblityFactory GetAbilityFactory()
-        //{
-        //    return new AbilityFactory();
-        //}
     }
 }

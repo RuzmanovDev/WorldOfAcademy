@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameObjects.Models.Abstract.Creature" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Abstract\Creature.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Abstract.Human" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Models\Abstract\Human.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Abstract.Pet" Collapsed="true">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Abstract\Pet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Abstract.Trainer" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Abstract\Trainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.CurrentYearTrainer" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAIAAAAAAAAAABAAAAAQAAAAAA=</HashCode>
+      <FileName>Models\CurrentYearTrainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Exam" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAFAAAAAQQIAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Models\Exam.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Models.PreviousYearTrainer" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PreviousYearTrainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Problem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAEAAgAAAQIAAAEAAAAEAAAABAAAAA=</HashCode>
+      <FileName>Models\Problem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Models.Student" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAhACgAICAAEAAgAARACAAEABAAAgAAAABCAAAA=</HashCode>
+      <FileName>Models\Student.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Pets.Cat" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pets\Cat.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Pets.Dog" Collapsed="true">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pets\Dog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Pets.GoldFish" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pets\GoldFish.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Pets.Turtle" Collapsed="true">
+    <Position X="14.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Pets\Turtle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GameObjects.Models.Stats.KnowledgeStats" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Stats\KnowledgeStats.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Engine.CommandManager" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAACAAAAAAhAAAAAEAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Engine\CommandManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.Engine.ConsoleLogger" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\ConsoleLogger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Engine.InteractionManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAISEAQGAIAAAAAAECAAAAIAAAACARA=</HashCode>
+      <FileName>Engine\InteractionManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Engine.Factories.ExamFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Engine\Factories\ExamFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Engine.Factories.PetFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAEgAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Factories\PetFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Engine.Factories.ProblemFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAAgAAAAIAAIAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Factories\ProblemFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Engine.Factories.StudentFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAgBAAAAAABAAAAA=</HashCode>
+      <FileName>Engine\Factories\StudentFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Engine.Factories.TrainerFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgAIAAQAAAA=</HashCode>
+      <FileName>Engine\Factories\TrainerFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GameObjects.Common.GlobalErrorMessages.GlobalErrorMessages" Collapsed="true">
+    <Position X="17" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\GlobalErrorMessages\GlobalErrorMessages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.Common.GlobalMessages.GlobalMessages" Collapsed="true">
+    <Position X="18.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAgA=</HashCode>
+      <FileName>Common\GlobalMessages\GlobalMessages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.Common.RandomProvider" Collapsed="true">
+    <Position X="22.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Common\RandomProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.Common.Validator" Collapsed="true">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAQAA=</HashCode>
+      <FileName>Common\Validator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObjects.Engine.InternalGameException" Collapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\InternalGameException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="GameObjects.Contracts.Engine.IExamFactory" Collapsed="true">
+    <Position X="18.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Contracts\Engine\IExamFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.Engine.IInteractionManager" Collapsed="true">
+    <Position X="20.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAIAAAAAARA=</HashCode>
+      <FileName>Contracts\Engine\IInteractionManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.Engine.ILogger" Collapsed="true">
+    <Position X="17" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Engine\ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.Engine.IPetFactory" Collapsed="true">
+    <Position X="18.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Engine\IPetFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.Engine.IProblemFactory" Collapsed="true">
+    <Position X="17" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Engine\IProblemFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.Engine.IStudentFactory" Collapsed="true">
+    <Position X="18.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\Engine\IStudentFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.Engine.ITrainerFactory" Collapsed="true">
+    <Position X="20.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Contracts\Engine\ITrainerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.ICreature" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ICreature.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.ICurrentYearTrainer" Collapsed="true">
+    <Position X="3.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ICurrentYearTrainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.IExam" Collapsed="true">
+    <Position X="17" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IExam.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.IHelper" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.IHuman" Collapsed="true">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IHuman.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.IKnowledge" Collapsed="true">
+    <Position X="22.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IKnowledge.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.IPet" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IPet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.IPetProblem" Collapsed="true">
+    <Position X="20.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IPetProblem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.IProblem" Collapsed="true">
+    <Position X="22.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Contracts\IProblem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.IStudent" Collapsed="true">
+    <Position X="1.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgACgAACAAAAAAAAQACAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Contracts\IStudent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GameObjects.Contracts.ITrainer" Collapsed="true">
+    <Position X="4" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ITrainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="GameObjects.Enumerations.OtherCompetence" Collapsed="true">
+    <Position X="17" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAEAAAE=</HashCode>
+      <FileName>Enumerations\OtherCompetence.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameObjects.Enumerations.ProblemType" Collapsed="true">
+    <Position X="18.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABCAAAAAACAAAAAAAAgBAQAABAAgAAAAAAAAAAIA=</HashCode>
+      <FileName>Enumerations\ProblemType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameObjects.Enumerations.StudentType" Collapsed="true">
+    <Position X="20.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\StudentType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameObjects.Enumerations.TrainerType" Collapsed="true">
+    <Position X="22.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\TrainerType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,11 +1,5 @@
 ﻿namespace GameObjects.Engine.Factories
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
     using GameObjects.Contracts.Engine;
     using GameObjects.Contracts;
     using Common;
@@ -15,7 +9,7 @@
     class ProblemFactory : IProblemFactory
     {
         private const int ProblemTypeMaxCount = 9;
-        private const int DificultyCoeff = 2;
+        private const int DificultyCoeff = 5;
 
         public IProblem CreateProblem()
         {
@@ -30,10 +24,11 @@
         {
             string name = "";
 
-            // TODO: add more problems to the examlist
             string[] problemNames = {"Kot-takoa","Malko Kote", "Card Wars Batka", "Penguin Airlines", "Batman", "Bobi-avokadoto", "Harry-Potter -20D",
                 "Singing Cats", "Chess-moves","Hills","Brackets","Brackets again", "Pipes","Mices","Na baba mi smetalnika","Angry bits", "Cats singing","De-cat coding", "Maslan",
-            "Two girls one path" , "Bit-shift Matrix", "Doge Coin","RelevanceIndex", "Digits"};
+            "Two girls one path" , "Bit-shift Matrix", "Doge Coin","RelevanceIndex", "Digits", "Console game Horse Spirit", "Tulips in the Garden", "Lets count!",
+            "Academy Catalogs", "Items control", "Datepicker", "Calendar template", "MinMax", "Triathlon", "Powers", "Cookie Super Styles", "Ocean crossing",
+            "Bulgarian Fibonacci Sequence", "UFO watching", "Archimedes low in Spase", "Alf walkings", "Safe the Queen!", "Alien fights", "DNA mutation" };
 
             name = problemNames[RandomProvider.Instance.Next(0, problemNames.Length)]; // maybe -1
 

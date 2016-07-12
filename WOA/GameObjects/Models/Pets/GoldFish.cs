@@ -1,13 +1,8 @@
-﻿using GameObjects.Contracts;
-using GameObjects.Models.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameObjects.Models.Pets
+﻿namespace GameObjects.Models.Pets
 {
+    using Abstract;
+    using Contracts;
+
     public class GoldFish : Pet, IPet
     {
         private const int KnowledgeBoost = 10;

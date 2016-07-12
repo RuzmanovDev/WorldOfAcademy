@@ -1,6 +1,4 @@
-﻿using GameObjects.Enumerations;
-
-namespace GameObjects.Contracts.Engine
+﻿namespace GameObjects.Contracts.Engine
 {
     public interface IInteractionManager
     {

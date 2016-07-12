@@ -6,8 +6,7 @@
     {
         IEnumerable<IProblem> ProblemList { get; }
 
-        void RestoreHP(IStudent student);
-
         double Dificulty { get; }
+
     }
 }

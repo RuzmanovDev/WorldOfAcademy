@@ -1,11 +1,13 @@
-﻿using GameObjects.Contracts;
-using GameObjects.Enumerations;
-
-namespace GameObjects.Contracts
+﻿namespace GameObjects.Contracts
 {
+    using System;
+
+    using GameObjects.Contracts;
+    using GameObjects.Enumerations;
+
     public interface IStudent : IHuman
     {
-        string HandleProblem(IProblem problem);
+        string HandleExam(IExam exam);
 
         IKnowledge Knowledge { get; }
 
@@ -17,6 +19,6 @@ namespace GameObjects.Contracts
 
         IPet Pet { get; }
 
-        string GetHelp();
+        event Func<IKnowledge, string> CantPassExam;
     }
 }

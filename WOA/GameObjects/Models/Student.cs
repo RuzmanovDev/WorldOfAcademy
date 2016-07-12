@@ -1,16 +1,11 @@
 ﻿namespace GameObjects.Models
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
 
     using GameObjects.Contracts;
     using GameObjects.Enumerations;
     using GameObjects.Models.Abstract;
-    using GameObjects.Common;
-    using GameObjects.Models.Stats;
 
     public class Student : Human, IStudent
     {
@@ -22,35 +17,18 @@
         private readonly StudentType studentType;
         private readonly OtherCompetence otherCompetence;
         private readonly IPet pet;
+        public event Func<IKnowledge, string> CantPassExam;
 
-        public Student(string name, IPet pet)
+        public Student(string name, IPet pet, StudentType studentType, OtherCompetence otherCompetance, IKnowledge knowledge)
             : base(name, Student.StudentBaseHp)
         {
-            // generate random number and cast it to enum
-            int studentTypeRandGen = RandomProvider.Instance.Next(0, 2);
-
-            this.studentType = (StudentType)studentTypeRandGen;
-            this.Knowledge = GenerateInitialKnowedge(this.StudentType);
-            this.otherCompetence = (OtherCompetence)RandomProvider.Instance.Next(0, 5);
+            this.studentType = studentType;
+            this.otherCompetence = otherCompetance;
+            this.Knowledge = knowledge;
             this.pet = pet;
-
+            this.IsAlive = true;
         }
-
-        private IKnowledge GenerateInitialKnowedge(StudentType studentType)
-        {
-            double initial = 0;
-            if (studentType != StudentType.ThisYearStudent)
-            {
-                initial = 10;
-            }
-            initial = RandomProvider.Instance.Next(10, 21) + initial + (int)this.OtherCompetence;
-
-            IKnowledge knowledge = new KnowledgeStats(initial);
-
-            return knowledge;
-        }
-
-
+        
 
         public StudentType StudentType
         {
@@ -89,31 +67,47 @@
             }
         }
 
-        public string HandleProblem(IProblem problem)
+        public string HandleExam(IExam exam)
         {
-            // vikame peta - toi ili pomaga ili ne 
+            // Call the pet to help or not
             var resultFromHandlingTheProblem = new StringBuilder();
+            resultFromHandlingTheProblem.AppendLine(this.GetHelpFromPet());
 
-            if (this.Knowledge.Knowledge > problem.Dificulty)
+            if (this.Knowledge.Knowledge > exam.Dificulty)
             {
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} has scored 100/100 at {problem.Name}");
-                // TODO: add hp
-            }
-            else
-            {
-                int hpLost = this.HP - (int)problem.Dificulty;
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} failed at {problem.Name}");
-                resultFromHandlingTheProblem.AppendLine($"{this.Name} losses {hpLost}HP");
-                this.HP -= (int)problem.Dificulty;
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has paced {exam}");
+                // when the student passes the exam he is healed == exam dificulty as int
+                this.ReceiveHP((int)exam.Dificulty);
+                return resultFromHandlingTheProblem.ToString();
             }
 
+
+            resultFromHandlingTheProblem.AppendLine(OnExamFail(this.knowledge));
+            if (this.Knowledge.Knowledge > exam.Dificulty)
+            {
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} has paced at {exam}");
+                // when the student passes the exam he is healed == exam dificulty as int
+                this.ReceiveHP((int)exam.Dificulty);
+                return resultFromHandlingTheProblem.ToString();
+
+            }
+
+
+            int hpLost = (int)exam.Dificulty;
+            this.HP -= hpLost;
+            resultFromHandlingTheProblem.AppendLine($"{this.Name} failed at {exam}");
+            resultFromHandlingTheProblem.AppendLine($"{this.Name} losses {hpLost}HP");
+            resultFromHandlingTheProblem.AppendLine($"{this.Name} HP -> {this.HP}HP");
+
+            if (this.HP <= 0)
+            {
+                this.IsAlive = false;
+                resultFromHandlingTheProblem.AppendLine($"{this.Name} cant take it any more, he will try SoftUni");
+            }
             return resultFromHandlingTheProblem.ToString();
         }
 
-        public string GetHelp()
-        {
-            return this.Pet.HelpMe(this.Knowledge);
-        }
+
 
         public override string ToString()
         {
@@ -128,6 +122,22 @@
         public void ReceiveHP(int hp)
         {
             this.HP += hp;
+        }
+
+        private string GetHelpFromPet()
+        {
+            return this.Pet.HelpMe(this.Knowledge);
+        }
+
+        protected virtual string OnExamFail(IKnowledge knowledg)
+        {
+            Func<IKnowledge, string> handler = CantPassExam;
+            if (handler != null)
+            {
+                return handler(knowledg);
+            }
+
+            return string.Empty;
         }
     }
 }

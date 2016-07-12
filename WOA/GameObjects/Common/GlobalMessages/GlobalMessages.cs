@@ -1,11 +1,4 @@
-﻿using GameObjects.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameObjects.Common.GlobalMessages
+﻿namespace GameObjects.Common.GlobalMessages
 {
     public static class GlobalMessages
     {
@@ -23,10 +16,5 @@ namespace GameObjects.Common.GlobalMessages
         {
             return $"--Trainer {name} gives exam to students";
         }
-
-        //public static string PetHelps(IPet pet)
-        //{
-        //    return $"-- {pet.ToString()}";
-        //}
     }
 }
